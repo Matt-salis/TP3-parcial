@@ -1,5 +1,6 @@
 package com.example.parcial_grupo_8_ya.screen.onboarding
 
+import LocationScreen
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,9 +28,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.R
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 
-@Preview
 @Composable
 fun Onboarding() {
     OnboardingScreen()
@@ -63,10 +67,10 @@ fun OnboardingScreen() {
                     painter = painterResource(id = R.drawable.logo_zanahoria),
                     contentDescription = "Logotipo Zanahoria",
                     contentScale = ContentScale.FillWidth,
-                    modifier = Modifier.width(70.dp)
+                    modifier = Modifier.width(50.dp)
                 )
             }
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(26.dp))
             Text(
                 text = "Welcome",
                 fontSize = 32.sp,
@@ -91,7 +95,7 @@ fun OnboardingScreen() {
             Spacer(modifier = Modifier.height(32.dp))
 
             // Botón
-            Button(onClick = { /* Acción del botón */ },
+            Button(onClick = {},
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF53B175)),
                 modifier = Modifier.fillMaxWidth(0.8f).height(60.dp),
                 shape = RoundedCornerShape(30),

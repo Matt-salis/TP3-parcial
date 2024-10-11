@@ -1,4 +1,15 @@
 package com.example.parcial_grupo_8_ya.screen.splash
+
+import LocationScreen
+import LocationScreenPreview
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.AnimationVector1D
+import androidx.compose.animation.core.FastOutLinearInEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -26,6 +37,7 @@ import com.example.parcial_grupo_8_ya.screen.checkout.CheckoutScreenPreview
 sealed class DestinationScreen(val route: String) {
     object SplashScreenDest : DestinationScreen(route = "splash_screen")
     object MainScreenDest : DestinationScreen(route = "main_screen")
+
 }
 
 @Composable
