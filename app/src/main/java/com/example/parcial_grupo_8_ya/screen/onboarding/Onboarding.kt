@@ -29,18 +29,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 
 @Composable
-fun Onboarding() {
-    OnboardingScreen()
+fun Onboarding(navController: NavController) {
+    OnboardingScreen(navController)
 }
 
 @Composable
-fun OnboardingScreen() {
+fun OnboardingScreen(navController: NavController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -95,7 +96,7 @@ fun OnboardingScreen() {
             Spacer(modifier = Modifier.height(32.dp))
 
             // Botón
-            Button(onClick = {},
+            Button(onClick = {navController.navigate(DestinationScreen.LoginDest.route)},
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF53B175)),
                 modifier = Modifier.fillMaxWidth(0.8f).height(60.dp),
                 shape = RoundedCornerShape(30),

@@ -38,6 +38,12 @@ sealed class DestinationScreen(val route: String) {
     object SplashScreenDest : DestinationScreen(route = "splash_screen")
     object MainScreenDest : DestinationScreen(route = "main_screen")
 
+    object LoginDest : DestinationScreen(route = "login_screen")
+    object signupDest : DestinationScreen(route = "signup_screen")
+
+    object locationDest : DestinationScreen(route = "location_screen")
+    object shopDest : DestinationScreen(route = "shop_screen")
+
 }
 
 @Composable

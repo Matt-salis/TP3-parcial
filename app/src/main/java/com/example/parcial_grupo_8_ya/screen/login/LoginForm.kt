@@ -69,6 +69,7 @@ import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.api.RetrofitClient
 import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
@@ -76,7 +77,7 @@ import retrofit2.Response
 
 @Composable
 @Preview
-fun LoginForm() {
+fun LoginForm(navController: NavController) {
 
 
     Surface{
@@ -156,7 +157,7 @@ fun LoginForm() {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            ButtonField(text = "Login In",{ coroutineScope.launch { CheckCredentials(credentials, context) } })
+            ButtonField(text = "Login In",{ coroutineScope.launch { CheckCredentials(credentials, context, navController) } })
 
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -167,7 +168,7 @@ fun LoginForm() {
                     text = "Signup",
                     color = Color.Green,
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.clickable { /* Acción de registro */ }
+                    modifier = Modifier.clickable { navController.navigate(DestinationScreen.signupDest.route)}
                 )
             }
 
@@ -176,7 +177,7 @@ fun LoginForm() {
     }
 }
 
-fun CheckCredentials(credentials: Credentials, context : Context){
+fun CheckCredentials(credentials: Credentials, context : Context, navController: NavController){
     if(credentials.isNotEmpty()){
         RetrofitClient.instance.userLogin(credentials.login,credentials.pwd)
             .enqueue(object: Callback<UsersListItem>{
@@ -186,6 +187,7 @@ fun CheckCredentials(credentials: Credentials, context : Context){
                 ) {
                     if(response.isSuccessful()) {
                         Toast.makeText(context, "Sign In Successful", Toast.LENGTH_SHORT).show()
+                        navController.navigate(DestinationScreen.shopDest.route)
                     }
                   else {
                         Toast.makeText(context, "Invalid username or password", Toast.LENGTH_SHORT).show()

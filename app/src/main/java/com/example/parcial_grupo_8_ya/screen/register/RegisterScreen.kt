@@ -27,10 +27,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.api.RetrofitClient
 import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
 import com.example.parcial_grupo_8_ya.screen.login.GradientBackground
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import com.example.parcial_grupo_8_ya.ui.theme.Parcial_grupo_8_YATheme
 import retrofit2.Call
 import retrofit2.Callback
@@ -41,7 +43,7 @@ import retrofit2.Response
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
-fun RegisterScreen() {
+fun RegisterScreen(navController: NavController) {
     var username by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -170,6 +172,7 @@ fun RegisterScreen() {
                             response: Response<UsersListItem>
                         ) {
                                 Toast.makeText(context, "Sign Up Successful", Toast.LENGTH_SHORT).show()
+                                navController.navigate(DestinationScreen.locationDest.route)
                         }
 
                         override fun onFailure(call: Call<UsersListItem>, t: Throwable) {
@@ -197,7 +200,7 @@ fun RegisterScreen() {
                 text = "Sing In",
                 color = Color.Green,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.clickable { /* Acción de registro */ }
+                modifier = Modifier.clickable { navController.navigate(DestinationScreen.LoginDest.route) }
             )
         }
     }
