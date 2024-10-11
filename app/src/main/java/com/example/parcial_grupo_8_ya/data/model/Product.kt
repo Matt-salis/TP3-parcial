@@ -5,10 +5,10 @@ data class Product(
     val name: String,
     val price: Double,
     val description: String,
-    val image: String // Recurso de imagen local (ID de drawable)
+    val image: Int // Recurso de imagen local (ID de drawable)
 )
 
-val supermarketProductList = listOf(
+/*val supermarketProductList = listOf(
     Product(
         id = "1",
         name = "Milk 1L",
@@ -44,4 +44,4 @@ val supermarketProductList = listOf(
         description = "Fresh organic tomatoes, ideal for salads or cooking.",
         image = ""
     )
-)
+)*/
