@@ -29,9 +29,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.R
+import com.example.parcial_grupo_8_ya.screen.login.LoginForm
 import com.example.parcial_grupo_8_ya.screen.onboarding.Onboarding
+import com.example.parcial_grupo_8_ya.screen.register.RegisterScreen
 import com.example.parcial_grupo_8_ya.screen.shop.Shop
-import com.example.parcial_grupo_8_ya.screen.checkout.CheckoutScreenPreview
+//import com.example.parcial_grupo_8_ya.screen.checkout.CheckoutScreenPreview
 
 
 sealed class DestinationScreen(val route: String) {
@@ -82,11 +84,19 @@ fun NavigationScreen() {
         }
 
         composable(route = DestinationScreen.MainScreenDest.route) {
-            Onboarding() // Pantalla de onboarding
+            Onboarding(navController = navController) // Pantalla de onboarding
         }
 
         composable(route = DestinationScreen.MainScreenDest.route) {
             Shop() // Pantalla de Shop
+        }
+
+        composable(route = DestinationScreen.MainScreenDest.route) {
+            LoginForm(navController = navController) // Pantalla de Login
+        }
+
+        composable(route = DestinationScreen.MainScreenDest.route) {
+            RegisterScreen(navController = navController) // Pantalla de Registro
         }
     }
 }

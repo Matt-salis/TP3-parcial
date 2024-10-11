@@ -76,7 +76,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 @Composable
-@Preview
+
 fun LoginForm(navController: NavController) {
 
 
@@ -139,7 +139,7 @@ fun LoginForm(navController: NavController) {
 
             PasswordField(value = credentials.pwd,
                 onChange = {data -> credentials = credentials.copy(pwd = data)},
-                submit = { coroutineScope.launch { CheckCredentials(credentials, context) } },
+                submit = { coroutineScope.launch { CheckCredentials(credentials, context, navController) } },
                 modifier = Modifier.background(Color.Transparent)
             )
 
