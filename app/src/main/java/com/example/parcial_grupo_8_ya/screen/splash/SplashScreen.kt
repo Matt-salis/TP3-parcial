@@ -1,5 +1,7 @@
 package com.example.parcial_grupo_8_ya.screen.splash
 
+import LocationScreen
+import LocationScreenPreview
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.AnimationVector1D
 import androidx.compose.animation.core.FastOutLinearInEasing
@@ -46,6 +48,7 @@ import kotlinx.coroutines.delay
 sealed class DestinationScreen(val route: String) {
     object SplashScreenDest : DestinationScreen(route = "splash_screen")
     object MainScreenDest : DestinationScreen(route = "main_screen")
+
 }
 
 @Composable
