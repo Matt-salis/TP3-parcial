@@ -1,0 +1,151 @@
+package com.example.parcial_grupo_8_ya.screen.orderaccepted
+
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Surface
+
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.parcial_grupo_8_ya.R
+import com.example.parcial_grupo_8_ya.screen.login.GradientBackground
+
+@Composable
+@Preview
+
+fun OrderAcceptedScreen() {
+    FadeInTransition()
+
+    Surface{
+        GradientBackground()
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Spacer(modifier = Modifier.height(100.dp))
+            // Checkmark icon
+
+            CheckMarkImage()
+
+            Spacer(modifier = Modifier.height(50.dp))
+
+            // Titulo
+            Text(
+                text = "Your Order has been accepted",
+                textAlign = TextAlign.Center,
+                style = TextStyle(
+                    fontSize = 30.sp,
+                    fontWeight = FontWeight.Bold,
+                )
+            )
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+
+            // Descripcion
+            Text(
+                text = "Your items have been placed and is on it's way to being processed",
+                style = TextStyle(
+                    fontSize = 17.sp,
+                    textAlign = TextAlign.Center
+                )
+            )
+
+            // Buttons
+            Spacer(modifier = Modifier.height(110.dp))
+            Button(
+                onClick = { TODO()},
+                shape = RoundedCornerShape(30.dp),
+                colors = ButtonDefaults.buttonColors(Color(0xFF53B175)),
+                contentPadding = PaddingValues(),
+                modifier = Modifier
+                    .size(width = 350.dp, height = 60.dp)
+                    .padding(start = 8.dp) // padding para centrar boton
+            ) {
+                Text("Track Order")
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(
+                onClick = { TODO() },
+                shape = RoundedCornerShape(30.dp),
+                colors = ButtonDefaults.buttonColors(Color.Transparent),
+                contentPadding = PaddingValues(),
+                modifier = Modifier
+                    .size(width = 350.dp, height = 30.dp)
+                    .padding(start = 8.dp) // padding para centrar boton
+            ) {
+                Text("Back to home", color = Color.Black)
+            }
+        }
+    }
+}
+
+@Composable
+fun FadeInTransition() {
+    var visible by remember { mutableStateOf(true) }
+
+    AnimatedVisibility(
+        visible = visible,
+        enter = fadeIn(),
+        exit = fadeOut()
+    ) {
+        // Fade in/out the background and the foreground.
+        Box(
+            Modifier
+                .fillMaxSize()
+                .background(Color.DarkGray)
+        ) {
+            Box(
+                Modifier
+                    .align(Alignment.Center)
+                    .animateEnterExit(
+                        // Slide in/out the inner box.
+                        enter = slideInVertically(),
+                        exit = slideOutVertically()
+                    )
+                    .sizeIn(minWidth = 256.dp, minHeight = 64.dp)
+                    .background(Color.Red)
+            ) {
+
+                CheckMarkImage()
+            }
+        }
+    }
+
+}
+
+@Composable
+fun CheckMarkImage() {
+    Image(
+        painter = painterResource(id = R.drawable.order_accepted),
+        contentDescription = "Order Accepted",
+        modifier = Modifier.fillMaxWidth().padding(start = 40.dp, end = 60.dp), // padding para centrar imagen
+        alignment = Alignment.Center
+    )
+}
