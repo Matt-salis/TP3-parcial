@@ -92,11 +92,15 @@ fun NavigationScreen() {
         }
 
         composable(route = DestinationScreen.MainScreenDest.route) {
-            LoginForm(navController = navController) // Pantalla de Login
+            LoginForm(
+//                navController = navController
+            ) // Pantalla de Login
         }
 
         composable(route = DestinationScreen.MainScreenDest.route) {
-            RegisterScreen(navController = navController) // Pantalla de Registro
+            RegisterScreen(
+//                navController = navController
+            ) // Pantalla de Registro
         }
     }
 }

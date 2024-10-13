@@ -2,244 +2,221 @@
 
 package com.example.parcial_grupo_8_ya.screen.login
 
-import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement.End
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material3.Button
-import androidx.compose.material3.Checkbox
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusDirection
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.unit.dp
-import com.example.parcial_grupo_8_ya.MainActivity
-import com.example.parcial_grupo_8_ya.data.model.User.UsersList
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.key.Key
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.api.RetrofitClient
 import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
+import com.example.parcial_grupo_8_ya.screen.register.OverrideDefaultColors
 import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+@Preview
 @Composable
-
-fun LoginForm(navController: NavController) {
-
-
-    Surface{
+fun LoginForm(
+ //   navController: NavController
+) {
+    Surface {
         GradientBackground()
-
-
-        var credentials by remember { mutableStateOf(Credentials()) }
         val context = LocalContext.current
         val coroutineScope = rememberCoroutineScope()
-
-
+        var credentials by remember { mutableStateOf(Credentials()) }
 
         Column(
-            verticalArrangement = Arrangement.Top,
-            horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp)
+                .padding(16.dp),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Spacer(modifier = Modifier.height(60.dp))
 
-            Image(
-                painter = painterResource(id = R.drawable.logo_zanahoria_naranja),
-                contentDescription = "Logotipo Zanahoria",
-                contentScale = ContentScale.Fit,
-                modifier = Modifier.width(50.dp)
-            )
-
+            Logo()
             Spacer(modifier = Modifier.height(30.dp))
-
-            Text(
-                text = "Sign In",
-                fontWeight = FontWeight.Medium,
-                fontSize = 30.sp,
-                modifier = Modifier.fillMaxWidth(),
-                textAlign = TextAlign.Start
-            )
-
+            Title("Sign In")
             Spacer(modifier = Modifier.height(15.dp))
-
-            Text(
-                text = "Enter your emails and password",
-                fontSize = 19.sp,
-                fontWeight = FontWeight.Medium,
-                color = Color.Gray,
-                modifier = Modifier.fillMaxWidth(),
-                textAlign = TextAlign.Start
-            )
-
+            Subtitle("Enter your email and password")
             Spacer(modifier = Modifier.height(16.dp))
 
+            // Email Field
             LoginField(
                 value = credentials.login,
-                onChange = {data -> credentials = credentials.copy(login = data)},
-                modifier = Modifier.background(Color.Transparent)
+                onChange = { data -> credentials = credentials.copy(login = data) }
             )
-
             Spacer(modifier = Modifier.height(16.dp))
 
-            PasswordField(value = credentials.pwd,
-                onChange = {data -> credentials = credentials.copy(pwd = data)},
-                submit = { coroutineScope.launch { CheckCredentials(credentials, context, navController) } },
-                modifier = Modifier.background(Color.Transparent)
+            // Password Field
+            PasswordField(
+                value = credentials.pwd,
+                onChange = { data -> credentials = credentials.copy(pwd = data) },
+                submit = { coroutineScope.launch { checkCredentials(credentials, context
+//                    , navController
+                ) } }
             )
-
             Spacer(modifier = Modifier.height(8.dp))
 
-            Text(
-                text = "Forgot Password?",
-                color = Color.Gray,
-                fontSize = 14.sp,
-                modifier = Modifier
-                    .align(Alignment.End)
-                    .clickable { /* Acción de olvido de contraseña */ }
+            // Forgot Password
+            ForgotPassword { /* Handle forgot password action */ }
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Login Button
+            ButtonField(
+                text = "Login",
+                onClick = { coroutineScope.launch { checkCredentials(credentials, context
+//                    , navController
+                ) } }
             )
-
-
             Spacer(modifier = Modifier.height(16.dp))
 
-            ButtonField(text = "Login In",{ coroutineScope.launch { CheckCredentials(credentials, context, navController) } })
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            Row {
-                Text(text = "Don't have an account?", fontSize = 14.sp, color = Color.Gray)
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(
-                    text = "Signup",
-                    color = Color.Green,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.clickable { navController.navigate(DestinationScreen.signupDest.route)}
-                )
-            }
-
-
+            // Sign Up CTA
+            SignUpPrompt(
+//                navController
+            )
         }
     }
 }
 
-fun CheckCredentials(credentials: Credentials, context : Context, navController: NavController){
-    if(credentials.isNotEmpty()){
-        RetrofitClient.instance.userLogin(credentials.login,credentials.pwd)
-            .enqueue(object: Callback<UsersListItem>{
-                override fun onResponse(
-                    call: Call<UsersListItem>,
-                    response: Response<UsersListItem>
-                ) {
-                    if(response.isSuccessful()) {
-                        Toast.makeText(context, "Sign In Successful", Toast.LENGTH_SHORT).show()
-                        navController.navigate(DestinationScreen.shopDest.route)
-                    }
-                  else {
-                        Toast.makeText(context, "Invalid username or password", Toast.LENGTH_SHORT).show()
-                  }
-                }
+@Composable
+fun Logo() {
+    Image(
+        painter = painterResource(id = R.drawable.logo_zanahoria_naranja),
+        contentDescription = "Logo Zanahoria",
+        modifier = Modifier.size(50.dp)
+    )
+}
 
-                override fun onFailure(call: Call<UsersListItem>, t: Throwable) {
-                    Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show()
-                }
+@Composable
+fun Title(text: String) {
+    Text(
+        text = text,
+        fontSize = 30.sp,
+        fontWeight = FontWeight.Medium,
+        modifier = Modifier.fillMaxWidth(),
+        textAlign = TextAlign.Start
+    )
+}
 
-            })
+@Composable
+fun Subtitle(text: String) {
+    Text(
+        text = text,
+        fontSize = 19.sp,
+        fontWeight = FontWeight.Medium,
+        color = Color.Gray,
+        modifier = Modifier.fillMaxWidth(),
+        textAlign = TextAlign.Start
+    )
+}
 
+@Composable
+fun ForgotPassword(onClick: () -> Unit) {
+    Box(modifier = Modifier.fillMaxWidth()) {
+        Text(
+            text = "Forgot Password?",
+            color = Color.Gray,
+            fontSize = 14.sp,
+            modifier = Modifier
+                .clickable(onClick = onClick)
+                .align(Alignment.CenterEnd).padding(8.dp)
+        )
     }
 }
 
-data class Credentials(var login : String = "", var pwd : String = "", var remember : Boolean = false) {
+@Composable
+fun SignUpPrompt(
+//    navController: NavController
+) {
+    Row {
+        Text(text = "Don't have an account?", fontSize = 14.sp, color = Color.Gray)
+        Spacer(modifier = Modifier.width(4.dp))
+        Text(
+            text = "Signup",
+            color = Color.Green,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.clickable {
+//                navController.navigate(DestinationScreen.signupDest.route)
+            }
+        )
+    }
+}
+
+// API call para chequear credenciales
+private fun checkCredentials(credentials: Credentials, context: Context
+//                             , navController: NavController
+) {
+    if (credentials.isNotEmpty()) {
+        RetrofitClient.instance.userLogin(credentials.login, credentials.pwd).enqueue(object : Callback<UsersListItem> {
+            override fun onResponse(call: Call<UsersListItem>, response: Response<UsersListItem>) {
+                if (response.isSuccessful) {
+                    Toast.makeText(context, "Sign In Successful", Toast.LENGTH_SHORT).show()
+//                    navController.navigate(DestinationScreen.shopDest.route)
+                } else {
+                    Toast.makeText(context, "Invalid username or password", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<UsersListItem>, t: Throwable) {
+                Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+}
+
+data class Credentials(var login: String = "", var pwd: String = "") {
     fun isNotEmpty(): Boolean {
         return login.isNotEmpty() && pwd.isNotEmpty()
     }
-
 }
 
-
 @Composable
-fun LoginField(value : String,
-               onChange : (String)->Unit,
-               modifier: Modifier = Modifier,
-               label : String = "Email",
-               placeholder : String = "Enter your Email"){
-
+fun LoginField(value: String, onChange: (String) -> Unit) {
     val focusManager = LocalFocusManager.current
-//    val leadingIcon = @Composable {
-//        Icon(
-//            Icons.Default.Person,
-//            contentDescription = "",
-//            tint = MaterialTheme.colorScheme.primary)
-//    }
-
 
     TextField(
         value = value,
         onValueChange = onChange,
         modifier = Modifier.fillMaxWidth(),
-//        leadingIcon = leadingIcon,
         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
-        keyboardActions = KeyboardActions(
-            onNext = {focusManager.moveFocus(FocusDirection.Down)}
-        ),
-        placeholder = { Text(placeholder) },
-        label = { Text(label) },
-        singleLine = true,
-        visualTransformation = VisualTransformation.None
+        keyboardActions = KeyboardActions(onNext = { focusManager.moveFocus(FocusDirection.Down) }),
+        colors = OverrideDefaultColors(),
+        placeholder = { Text("Enter your Email") },
+        label = { Text("Email") },
+        singleLine = true
     )
 }
 
@@ -280,6 +257,7 @@ fun PasswordField(value : String,
         keyboardActions = KeyboardActions(
             onDone = {submit()}
         ),
+        colors = OverrideDefaultColors(),
         placeholder = { Text(placeholder) },
         label = { Text(label) },
         singleLine = true,
