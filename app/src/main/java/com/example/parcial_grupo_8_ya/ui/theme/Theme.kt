@@ -60,6 +60,8 @@ fun Parcial_grupo_8_YATheme(
             window.statusBarColor = colorScheme.primary.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
+
+
     }
 
     MaterialTheme(
