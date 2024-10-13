@@ -39,7 +39,7 @@ import retrofit2.Response
 @Preview
 @Composable
 fun RegisterScreen(
-//                   navController: NavController
+                   navController: NavController
 ) {
     var username by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
@@ -95,14 +95,14 @@ fun RegisterScreen(
 
         // Sign Up Button
         SignUpButton(username, email, password, context
-//            , navController
+            , navController
         )
 
         Spacer(modifier = Modifier.height(16.dp))
 
         // Login Navigation
         LoginNavigation(
-//            navController
+            navController
         )
     }
 }
@@ -206,16 +206,16 @@ fun AgreementText() {
 
 @Composable
 fun SignUpButton(username: String, email: String, password: String, context: Context
-//                 , navController: NavController
+                 , navController: NavController
 ) {
     Button(
         onClick = {
             RetrofitClient.instance.createUser(username, email, password).enqueue(object: Callback<UsersListItem> {
                 override fun onResponse(call: Call<UsersListItem>, response: Response<UsersListItem>) {
-//                    navController.navigate(DestinationScreen.locationDest.route)
+                    navController.navigate(DestinationScreen.locationDest.route)
                     if (response.isSuccessful && username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
                         Toast.makeText(context, "Sign In Successful", Toast.LENGTH_SHORT).show()
-//                    navController.navigate(DestinationScreen.shopDest.route)
+                    navController.navigate(DestinationScreen.locationDest.route)
                     } else {
                         Toast.makeText(context, "Please fill all fields", Toast.LENGTH_SHORT).show()
                     }
@@ -237,7 +237,7 @@ fun SignUpButton(username: String, email: String, password: String, context: Con
 
 @Composable
 fun LoginNavigation(
-//    navController: NavController
+    navController: NavController
 ) {
     Row {
         Text(text = "Already have an account?", fontSize = 14.sp, color = Color.Gray)
@@ -247,7 +247,7 @@ fun LoginNavigation(
             color = Color.Green,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.clickable {
-//                navController.navigate(DestinationScreen.LoginDest.route)
+                navController.navigate(DestinationScreen.loginDest.route)
             }
         )
     }

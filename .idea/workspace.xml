@@ -9,8 +9,284 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b103486-e7bd-493b-b261-8c45ffdc6b96" name="Changes" comment="pulida a reg y log, pantallas beverages, orderAccepted y detailsScreen">
+    <list default="true" id="9b103486-e7bd-493b-b261-8c45ffdc6b96" name="Changes" comment="pantalla onboarding, location y account">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable-v24_ic_launcher_foreground.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable-v24_ic_launcher_foreground.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_apple.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_apple.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_bananas.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_bananas.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_banner.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_banner.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_fondo_onboarding.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_fondo_onboarding.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_jengibre_shop.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_jengibre_shop.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_logo_splash.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_logo_splash.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_logo_zanahoria.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_logo_zanahoria.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_morrones.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/drawable_morrones.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-af_values-af.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-af_values-af.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-am_values-am.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-am_values-am.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ar_values-ar.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ar_values-ar.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-as_values-as.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-as_values-as.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-az_values-az.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-az_values-az.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-be_values-be.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-be_values-be.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-bg_values-bg.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-bg_values-bg.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-bn_values-bn.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-bn_values-bn.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-bs_values-bs.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-bs_values-bs.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ca_values-ca.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ca_values-ca.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-cs_values-cs.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-cs_values-cs.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-da_values-da.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-da_values-da.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-de_values-de.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-de_values-de.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-el_values-el.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-el_values-el.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rAU_values-en-rAU.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rAU_values-en-rAU.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rCA_values-en-rCA.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rCA_values-en-rCA.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rGB_values-en-rGB.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rGB_values-en-rGB.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rIN_values-en-rIN.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rIN_values-en-rIN.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rXC_values-en-rXC.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-en-rXC_values-en-rXC.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-es-rUS_values-es-rUS.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-es-rUS_values-es-rUS.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-es_values-es.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-es_values-es.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-et_values-et.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-et_values-et.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-eu_values-eu.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-eu_values-eu.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-fa_values-fa.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-fa_values-fa.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-fi_values-fi.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-fi_values-fi.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-fr-rCA_values-fr-rCA.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-fr-rCA_values-fr-rCA.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-fr_values-fr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-fr_values-fr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-gl_values-gl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-gl_values-gl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-gu_values-gu.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-gu_values-gu.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-hi_values-hi.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-hi_values-hi.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-hr_values-hr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-hr_values-hr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-hu_values-hu.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-hu_values-hu.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-hy_values-hy.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-hy_values-hy.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-in_values-in.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-in_values-in.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-is_values-is.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-is_values-is.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-it_values-it.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-it_values-it.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-iw_values-iw.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-iw_values-iw.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ja_values-ja.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ja_values-ja.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ka_values-ka.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ka_values-ka.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-kk_values-kk.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-kk_values-kk.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-km_values-km.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-km_values-km.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-kn_values-kn.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-kn_values-kn.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ko_values-ko.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ko_values-ko.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ky_values-ky.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ky_values-ky.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-lo_values-lo.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-lo_values-lo.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-lt_values-lt.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-lt_values-lt.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-lv_values-lv.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-lv_values-lv.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-mk_values-mk.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-mk_values-mk.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ml_values-ml.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ml_values-ml.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-mn_values-mn.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-mn_values-mn.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-mr_values-mr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-mr_values-mr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ms_values-ms.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ms_values-ms.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-my_values-my.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-my_values-my.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-nb_values-nb.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-nb_values-nb.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ne_values-ne.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ne_values-ne.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-nl_values-nl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-nl_values-nl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-or_values-or.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-or_values-or.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pa_values-pa.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pa_values-pa.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pl_values-pl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pl_values-pl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pt-rBR_values-pt-rBR.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pt-rBR_values-pt-rBR.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pt-rPT_values-pt-rPT.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pt-rPT_values-pt-rPT.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pt_values-pt.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-pt_values-pt.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ro_values-ro.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ro_values-ro.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ru_values-ru.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ru_values-ru.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-si_values-si.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-si_values-si.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sk_values-sk.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sk_values-sk.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sl_values-sl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sl_values-sl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sq_values-sq.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sq_values-sq.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sr_values-sr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sr_values-sr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sv_values-sv.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sv_values-sv.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sw_values-sw.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-sw_values-sw.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ta_values-ta.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ta_values-ta.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-te_values-te.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-te_values-te.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-th_values-th.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-th_values-th.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-tl_values-tl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-tl_values-tl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-tr_values-tr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-tr_values-tr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-uk_values-uk.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-uk_values-uk.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ur_values-ur.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-ur_values-ur.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-uz_values-uz.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-uz_values-uz.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-v21_values-v21.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-v21_values-v21.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-vi_values-vi.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-vi_values-vi.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-zh-rCN_values-zh-rCN.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-zh-rCN_values-zh-rCN.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-zh-rHK_values-zh-rHK.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-zh-rHK_values-zh-rHK.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-zh-rTW_values-zh-rTW.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-zh-rTW_values-zh-rTW.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-zu_values-zu.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values-zu_values-zu.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/values_values.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/xml_backup_rules.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/xml_backup_rules.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/xml_data_extraction_rules.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/xml_data_extraction_rules.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/cacheable/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/META-INF/app_debug.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ComposableSingletons$MainActivityKt$lambda-1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ComposableSingletons$MainActivityKt$lambda-2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ComposableSingletons$MainActivityKt$lambda-3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ComposableSingletons$MainActivityKt$lambda-4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ComposableSingletons$MainActivityKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/LiveLiterals$MainActivityKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/MainActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/MainActivityKt$GreetingPreview$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/MainActivityKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/data/model/LiveLiterals$ProductKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/data/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/onboarding/ComposableSingletons$OnboardingKt$lambda-1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/onboarding/ComposableSingletons$OnboardingKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/onboarding/LiveLiterals$OnboardingKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/onboarding/OnboardingKt$Onboarding$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/onboarding/OnboardingKt$OnboardingScreen$1$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/onboarding/OnboardingKt$OnboardingScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/onboarding/OnboardingKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ComposableSingletons$ProductCardKt$lambda-1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ComposableSingletons$ProductCardKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/LiveLiterals$ProductCardKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/LiveLiterals$ShopKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ProductCardKt$ProductCard$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ProductCardKt$ProductCard$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ProductCardKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ProductCardList$1$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ProductCardList$1$invoke$$inlined$items$default$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ProductCardList$1$invoke$$inlined$items$default$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ProductCardList$1$invoke$$inlined$items$default$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ProductCardList$1$invoke$$inlined$items$default$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ProductCardList$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ProductCardList$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ProductSection$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ProductSection$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$Shop$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ShopScreen$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ShopScreen$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt$ShopScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/shop/ShopKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/ComposableSingletons$SplashScreenKt$lambda-1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/ComposableSingletons$SplashScreenKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/DestinationScreen$MainScreenDest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/DestinationScreen$SplashScreenDest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/DestinationScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/LiveLiterals$SplashScreenKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/SplashScreenKt$DesignSplashScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/SplashScreenKt$NavigationScreen$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/SplashScreenKt$NavigationScreen$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/SplashScreenKt$NavigationScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/SplashScreenKt$SplashScreen$1$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/SplashScreenKt$SplashScreen$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/SplashScreenKt$SplashScreen$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/SplashScreenKt$SplashScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/screen/splash/SplashScreenKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ui/theme/ColorKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ui/theme/LiveLiterals$ThemeKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ui/theme/ThemeKt$Parcial_grupo_8_YATheme$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ui/theme/ThemeKt$Parcial_grupo_8_YATheme$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ui/theme/ThemeKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/parcial_grupo_8_ya/ui/theme/TypeKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/explore/ExploreScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/explore/ExploreScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/location/Location.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/location/Location.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/login/LoginForm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/login/LoginForm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/onboarding/Onboarding.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/onboarding/Onboarding.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/register/RegisterScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/register/RegisterScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/shop/Shop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/shop/Shop.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/splash/SplashScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/screen/splash/SplashScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/ui/component/BottomBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parcial_grupo_8_ya/ui/component/BottomBar.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +296,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\agust\.android\avd\Pixel_3a_API_35.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\ASUS\.android\avd\Pixel_3a_API_34_extension_level_7_x86_64.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -105,28 +381,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Android App.app.executor": "Run",
-    "Compose Preview.PreviewCategoryScreen.executor": "Run",
-    "Compose Preview.PreviewFilterPopUp.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "agus-actualizado",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Karen/AndroidStudioProjects/TP3-parcial/app/src/main/res/drawable",
-    "last_opened_file_path": "C:/Users/Karen/AndroidStudioProjects/TP3-parcial/app/src/main/res/drawable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;Compose Preview.PreviewCategoryScreen.executor&quot;: &quot;Run&quot;,
+    &quot;Compose Preview.PreviewFilterPopUp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;agus-actualizado&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Karen/AndroidStudioProjects/TP3-parcial/app/src/main/res/drawable&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Karen/AndroidStudioProjects/TP3-parcial/app/src/main/res/drawable&quot;
   },
-  "keyToStringList": {
-    "kotlin-gradle-user-dirs": [
-      "C:\\Users\\Karen\\.gradle"
+  &quot;keyToStringList&quot;: {
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;C:\\Users\\Karen\\.gradle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Karen\AndroidStudioProjects\TP3-parcial\app\src\main\res\drawable" />
@@ -152,6 +428,7 @@
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -162,8 +439,6 @@
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Auto>
       <Hybrid>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
@@ -171,21 +446,14 @@
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Hybrid>
-      <Java>
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Java>
+      <Java />
       <Native>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
         <option name="SHOW_STATIC_VARS" value="true" />
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
@@ -218,6 +486,7 @@
       <option name="MODE" value="specific_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -228,8 +497,6 @@
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Auto>
       <Hybrid>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
@@ -237,21 +504,14 @@
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Hybrid>
-      <Java>
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Java>
+      <Java />
       <Native>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
         <option name="SHOW_STATIC_VARS" value="true" />
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
@@ -285,6 +545,7 @@
       <option name="MODE" value="specific_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -295,8 +556,6 @@
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Auto>
       <Hybrid>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
@@ -304,21 +563,14 @@
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Hybrid>
-      <Java>
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Java>
+      <Java />
       <Native>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
         <option name="SHOW_STATIC_VARS" value="true" />
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />

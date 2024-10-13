@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -87,7 +88,7 @@ fun LocationScreen(navController : NavController) {
 
             // Button
             Button(
-                onClick = { /* Acción del botón */ },
+                onClick = { navController.navigate(DestinationScreen.shopDest.route) },
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF53B175)),
                 modifier = Modifier
                     .fillMaxWidth(0.8f)

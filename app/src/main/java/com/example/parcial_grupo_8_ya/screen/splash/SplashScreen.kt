@@ -1,15 +1,6 @@
 package com.example.parcial_grupo_8_ya.screen.splash
 
-import LocationScreen
 import LocationScreenPreview
-import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.AnimationVector1D
-import androidx.compose.animation.core.FastOutLinearInEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -29,22 +20,33 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.R
+import com.example.parcial_grupo_8_ya.screen.account.AccountScreenPreview
+import com.example.parcial_grupo_8_ya.screen.categories.BeveragesScreen
+import com.example.parcial_grupo_8_ya.screen.details.ProductDetails
+import com.example.parcial_grupo_8_ya.screen.explore.CategoryScreen
 import com.example.parcial_grupo_8_ya.screen.login.LoginForm
 import com.example.parcial_grupo_8_ya.screen.onboarding.Onboarding
+import com.example.parcial_grupo_8_ya.screen.orderaccepted.OrderAcceptedScreen
 import com.example.parcial_grupo_8_ya.screen.register.RegisterScreen
+import com.example.parcial_grupo_8_ya.screen.search.SearchScreen
 import com.example.parcial_grupo_8_ya.screen.shop.Shop
 //import com.example.parcial_grupo_8_ya.screen.checkout.CheckoutScreenPreview
 
 
 sealed class DestinationScreen(val route: String) {
-    object SplashScreenDest : DestinationScreen(route = "splash_screen")
-    object MainScreenDest : DestinationScreen(route = "main_screen")
-
-    object LoginDest : DestinationScreen(route = "login_screen")
+    object splashScreenDest : DestinationScreen(route = "splash_screen")
+    object onboardingScreen : DestinationScreen(route = "main_screen")
+    object loginDest : DestinationScreen(route = "login_screen")
     object signupDest : DestinationScreen(route = "signup_screen")
-
     object locationDest : DestinationScreen(route = "location_screen")
     object shopDest : DestinationScreen(route = "shop_screen")
+    object beveragesDest : DestinationScreen(route = "beverages_screen")
+    object productDest : DestinationScreen(route = "product_screen")
+    object accountDest : DestinationScreen(route = "account_screen")
+    object exploreDest : DestinationScreen(route = "explore_screen")
+    object searchDest : DestinationScreen(route = "search_screen")
+    object orderAcceptedDest : DestinationScreen(route = "order_accepted_screen")
+
 
 }
 
@@ -77,28 +79,66 @@ fun NavigationScreen() {
 
     NavHost(
         navController = navController,
-        startDestination = DestinationScreen.SplashScreenDest.route // Comienza en la splash
+        startDestination = DestinationScreen.splashScreenDest.route // Comienza en la splash
     ) {
-        composable(route = DestinationScreen.SplashScreenDest.route) {
+        composable(route = DestinationScreen.splashScreenDest.route) {
             SplashScreen(navController = navController) // Pantalla de splash
         }
 
-        composable(route = DestinationScreen.MainScreenDest.route) {
+        composable(route = DestinationScreen.onboardingScreen.route) {
             Onboarding(navController = navController) // Pantalla de onboarding
         }
 
-        composable(route = DestinationScreen.MainScreenDest.route) {
+        composable(route = DestinationScreen.locationDest.route) {
+            LocationScreenPreview(navController = navController) // Pantalla de onboarding
+        }
+
+        composable(route = DestinationScreen.shopDest.route) {
             Shop() // Pantalla de Shop
         }
 
-        composable(route = DestinationScreen.MainScreenDest.route) {
+        composable(route = DestinationScreen.loginDest.route) {
             LoginForm(
 //                navController = navController
             ) // Pantalla de Login
         }
-
-        composable(route = DestinationScreen.MainScreenDest.route) {
+        composable(route = DestinationScreen.beveragesDest.route) {
+            BeveragesScreen(
+//                navController = navController
+            ) // Pantalla de Login
+        }
+        composable(route = DestinationScreen.signupDest.route) {
             RegisterScreen(
+//                navController = navController
+            ) // Pantalla de Registro
+        }
+
+        composable(route = DestinationScreen.productDest.route) {
+            ProductDetails(
+//                navController = navController
+            ) // Pantalla de Registro
+        }
+
+        composable(route = DestinationScreen.accountDest.route) {
+            AccountScreenPreview(
+//                navController = navController
+            ) // Pantalla de Registro
+        }
+
+        composable(route = DestinationScreen.exploreDest.route) {
+            CategoryScreen(
+//                navController = navController
+            ) // Pantalla de Registro
+        }
+
+        composable(route = DestinationScreen.searchDest.route) {
+            SearchScreen(
+//                navController = navController
+            ) // Pantalla de Registro
+        }
+
+        composable(route = DestinationScreen.orderAcceptedDest.route) {
+            OrderAcceptedScreen(
 //                navController = navController
             ) // Pantalla de Registro
         }
@@ -113,9 +153,9 @@ fun SplashScreen(navController: NavController) {
     // Usamos LaunchedEffect para navegar automáticamente después de un tiempo
     LaunchedEffect(key1 = true) {
         // Luego de la espera, navegamos a la siguiente pantalla
-        navController.navigate(DestinationScreen.MainScreenDest.route) {
+        navController.navigate(DestinationScreen.onboardingScreen.route) {
             // Evita regresar a la SplashScreen con el botón de retroceso
-            popUpTo(DestinationScreen.SplashScreenDest.route) {
+            popUpTo(DestinationScreen.splashScreenDest.route) {
                 inclusive = true
             }
         }

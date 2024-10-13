@@ -26,16 +26,17 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.screen.explore.CategoryScreen
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import com.example.parcial_grupo_8_ya.ui.theme.Green
 import com.example.parcial_grupo_8_ya.ui.theme.Purple40
 
 
 sealed class BottomNavItem(val route: String, val icon: ImageVector, val label: String) {
-    object Shop : BottomNavItem("shop", Icons.Filled.Storefront, "Shop")
-    object Explore : BottomNavItem("explore", Icons.Filled.Search, "Explore")
+    object Shop : BottomNavItem(DestinationScreen.shopDest.route, Icons.Filled.Storefront, "Shop")
+    object Explore : BottomNavItem(DestinationScreen.exploreDest.route, Icons.Filled.Search, "Explore")
     object Cart : BottomNavItem("cart", Icons.Filled.ShoppingCart, "Cart")
     object Favourite : BottomNavItem("favourite", Icons.Filled.Favorite, "Favourite")
-    object Account : BottomNavItem("account", Icons.Filled.AccountBox, "Account")
+    object Account : BottomNavItem(DestinationScreen.accountDest.route, Icons.Filled.AccountBox, "Account")
 }
 
 val BottomNavItems = listOf(
@@ -97,18 +98,6 @@ fun BottomNavigationBar(navController: NavController) {
     }
 }
 
-@Composable
-fun NavigationHost() {
-    val navController = rememberNavController()
-
-    NavHost(navController = navController, startDestination = BottomNavItem.Shop.route) {
-        composable(BottomNavItem.Shop.route) { /* Home Screen UI */ }
-        composable(BottomNavItem.Explore.route) { CategoryScreen() }
-        composable(BottomNavItem.Cart.route) { /* Profile Screen UI */ }
-        composable(BottomNavItem.Favourite.route) { /* Profile Screen UI */ }
-        composable(BottomNavItem.Account.route) { /* Profile Screen UI */ }
-    }
-}
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -124,6 +113,5 @@ fun BottomNavigationPreview() {
             BottomNavigationBar(navController = navController)
         }
     ) {
-        NavigationHost()
     }
 }

@@ -21,16 +21,34 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.parcial_grupo_8_ya.R
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
+import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.data.model.Product
+import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
+import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
 fun Shop() {
-    ShopScreen()
+    val navController = rememberNavController()
+
+    Scaffold(
+        topBar = {
+            CustomTopBar(title = "Shop")
+        },
+        bottomBar = {
+            BottomNavigationBar(navController = navController)
+        }
+    ) { innerPadding ->
+        ShopScreen(Modifier.padding(innerPadding))
+    }
+
 }
 
 @Composable
-fun ShopScreen() {
+fun ShopScreen(padding: Modifier) {
 
     val exclusiveOfferProducts = listOf(
         Product("1", "Organic Bananas", 4.99, "7pcs, Price", R.drawable.bananas),
@@ -44,7 +62,7 @@ fun ShopScreen() {
     )
 
     LazyColumn(
-        modifier = Modifier
+        modifier = padding
             .fillMaxSize()
             .background(White)
             .padding(16.dp),

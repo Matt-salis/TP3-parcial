@@ -46,10 +46,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-@Preview
+
 @Composable
 fun LoginForm(
- //   navController: NavController
+    navController: NavController
 ) {
     Surface {
         GradientBackground()
@@ -85,7 +85,7 @@ fun LoginForm(
                 value = credentials.pwd,
                 onChange = { data -> credentials = credentials.copy(pwd = data) },
                 submit = { coroutineScope.launch { checkCredentials(credentials, context
-//                    , navController
+                    , navController
                 ) } }
             )
             Spacer(modifier = Modifier.height(8.dp))
@@ -98,14 +98,14 @@ fun LoginForm(
             ButtonField(
                 text = "Login",
                 onClick = { coroutineScope.launch { checkCredentials(credentials, context
-//                    , navController
+                    , navController
                 ) } }
             )
             Spacer(modifier = Modifier.height(16.dp))
 
             // Sign Up CTA
             SignUpPrompt(
-//                navController
+                navController
             )
         }
     }
@@ -159,7 +159,7 @@ fun ForgotPassword(onClick: () -> Unit) {
 
 @Composable
 fun SignUpPrompt(
-//    navController: NavController
+    navController: NavController
 ) {
     Row {
         Text(text = "Don't have an account?", fontSize = 14.sp, color = Color.Gray)
@@ -169,7 +169,7 @@ fun SignUpPrompt(
             color = Color.Green,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.clickable {
-//                navController.navigate(DestinationScreen.signupDest.route)
+            navController.navigate(DestinationScreen.signupDest.route)
             }
         )
     }
@@ -177,14 +177,14 @@ fun SignUpPrompt(
 
 // API call para chequear credenciales
 private fun checkCredentials(credentials: Credentials, context: Context
-//                             , navController: NavController
+                            , navController: NavController
 ) {
     if (credentials.isNotEmpty()) {
         RetrofitClient.instance.userLogin(credentials.login, credentials.pwd).enqueue(object : Callback<UsersListItem> {
             override fun onResponse(call: Call<UsersListItem>, response: Response<UsersListItem>) {
                 if (response.isSuccessful) {
                     Toast.makeText(context, "Sign In Successful", Toast.LENGTH_SHORT).show()
-//                    navController.navigate(DestinationScreen.shopDest.route)
+                    navController.navigate(DestinationScreen.shopDest.route)
                 } else {
                     Toast.makeText(context, "Invalid username or password", Toast.LENGTH_SHORT).show()
                 }
