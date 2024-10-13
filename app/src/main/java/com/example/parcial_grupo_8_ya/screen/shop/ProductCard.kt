@@ -38,6 +38,8 @@ fun ProductCard(
         colors = CardDefaults.cardColors(containerColor = Color.White)
     ) {
         Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
             modifier = Modifier.padding(16.dp)
                 .fillMaxSize()
         ) {
@@ -45,9 +47,8 @@ fun ProductCard(
             Image(
                 painter = painterResource(id = productImageRes),
                 contentDescription = null,
-                contentScale = ContentScale.Crop,
+                contentScale = ContentScale.FillHeight,
                 modifier = Modifier
-                    .fillMaxWidth()
                     .height(100.dp)
             )
             Spacer(modifier = Modifier.height(8.dp))
