@@ -15,6 +15,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
@@ -30,36 +31,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
+import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
+import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 
 
 @Composable
-fun AccountScreen(onMenuClick: () -> Unit) {
-    Column(modifier = Modifier.fillMaxSize().background(Color.White) ) {
-        // Top bar with menu icon and Account title
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            IconButton(onClick = { onMenuClick() }) {
-                Icon(Icons.Default.Menu, contentDescription = "Menu")
-            }
-
-            Text(
-                text = "Account",
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.align(Alignment.CenterVertically)
-            )
-
-            Spacer(modifier = Modifier.width(48.dp)) // Empty space to balance the layout
-        }
-
-        Spacer(modifier = Modifier.height(5.dp))
-
+fun AccountScreen(onMenuClick: () -> Unit, modifier: Modifier) {
+    Column(modifier = modifier
+        .fillMaxSize()
+        .background(Color.White)) {
         // Profile Section
         Row(
             modifier = Modifier
@@ -120,7 +102,7 @@ fun AccountScreen(onMenuClick: () -> Unit) {
         ) {
 
             Text(text = "Dark Mode", fontSize = 20.sp, fontWeight = FontWeight.Medium)
-            
+
             Spacer(modifier = Modifier.weight(1f))  // Push the switch to the end
 
             Switch(
@@ -130,11 +112,15 @@ fun AccountScreen(onMenuClick: () -> Unit) {
             )
         }
 
-        Row(modifier = Modifier
-            .fillMaxWidth().padding(16.dp),
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center) {
-            Button(onClick = {},
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Button(
+                onClick = {},
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF2F3F2)),
                 modifier = Modifier
                     .fillMaxWidth(0.8f)
@@ -142,7 +128,10 @@ fun AccountScreen(onMenuClick: () -> Unit) {
                 shape = RoundedCornerShape(30),
             ) {
 
-                Image(painter = painterResource(id = R.drawable.exit), contentDescription = "exit icon" )
+                Image(
+                    painter = painterResource(id = R.drawable.exit),
+                    contentDescription = "exit icon"
+                )
                 Spacer(modifier = Modifier.weight(1f))
                 Text(text = "Log Out", fontSize = 18.sp, color = Color(0xFF53B175))
                 Spacer(modifier = Modifier.weight(1f))
@@ -182,8 +171,17 @@ fun AccountOption(title: String, icon: Int, onClick: () -> Unit) {
     }
 }
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
-fun AccountScreenPreview() {
-    AccountScreen(onMenuClick = {})
+fun AccountScreenPreview(navController: NavController) {
+    Scaffold(
+        topBar = {
+            CustomTopBar(title = "Account")
+        },
+        bottomBar = {
+            BottomNavigationBar(navController = navController)
+        }
+    ) { innerPadding ->
+        AccountScreen(onMenuClick = {}, Modifier.padding(innerPadding))
+    }
 }

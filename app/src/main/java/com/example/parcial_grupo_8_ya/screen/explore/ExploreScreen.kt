@@ -21,6 +21,10 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -29,15 +33,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.data.model.Category
 import com.example.parcial_grupo_8_ya.data.model.getCategories
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
 import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 import com.example.parcial_grupo_8_ya.ui.component.SearchBar
 
 @Composable
-fun CategoryScreen(modifier: Modifier = Modifier) {
+fun Category(navController: NavController, modifier: Modifier = Modifier) {
+    var searchQuery by remember { mutableStateOf("") }
+
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -45,14 +53,18 @@ fun CategoryScreen(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        SearchBar(searchQuery = "", onSearchQueryChange = {})
+        SearchBar(
+            searchQuery = searchQuery,
+            onSearchQueryChange = { newQuery -> searchQuery = newQuery },
+            navController = navController
+        )
         Spacer(modifier = Modifier.height(18.dp))
-        CategoryGrid(getCategories())
+        CategoryGrid(getCategories(), navController)
     }
 }
 
 @Composable
-fun CategoryGrid(categories: List<Category>) {
+fun CategoryGrid(categories: List<Category>, navController: NavController) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         modifier = Modifier.fillMaxWidth(),
@@ -61,13 +73,13 @@ fun CategoryGrid(categories: List<Category>) {
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         items(categories.size) { index ->
-            CategoryCard(category = categories[index])
+            CategoryCard(category = categories[index], navController)
         }
     }
 }
 
 @Composable
-fun CategoryCard(category: Category) {
+fun CategoryCard(category: Category, navController: NavController) {
     val borderColor = category.backgroundColor.darker()
     Card(
         shape = RoundedCornerShape(12.dp),
@@ -77,7 +89,7 @@ fun CategoryCard(category: Category) {
             .fillMaxWidth()
             .aspectRatio(1f),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
-        onClick = {/*ALGO*/ }
+        onClick = { navController.navigate(DestinationScreen.beveragesDest.route) }
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -111,13 +123,9 @@ fun Color.darker(): Color {
     )
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Preview(showBackground = true)
+
 @Composable
-fun PreviewCategoryScreen() {
-
-    val navController = rememberNavController()
-
+fun CategoryScreen(navController: NavController) {
     Scaffold(
         topBar = {
             CustomTopBar(title = "Find Products")
@@ -126,7 +134,6 @@ fun PreviewCategoryScreen() {
             BottomNavigationBar(navController = navController)
         }
     ) { innerPadding ->
-        CategoryScreen(Modifier.padding(innerPadding))
+        Category(navController, Modifier.padding(innerPadding))
     }
-
 }

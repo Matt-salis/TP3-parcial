@@ -23,17 +23,16 @@ import com.example.parcial_grupo_8_ya.R
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
+import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.data.model.Product
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
 import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Preview
+//@OptIn(ExperimentalMaterial3Api::class)
+//@Preview
 @Composable
-fun Shop() {
-    val navController = rememberNavController()
-
+fun Shop(navController: NavController) {
     Scaffold(
         topBar = {
             CustomTopBar(title = "Shop")

@@ -15,10 +15,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 
 @Composable
-fun FilterPopUp(onDismiss: () -> Unit) {
+fun FilterPopUp(onDismiss: () -> Unit, navController: NavController) {
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -81,6 +82,7 @@ fun FilterPopUp(onDismiss: () -> Unit) {
 
                     Button(
                         onClick = {
+                            navController.navigate(DestinationScreen.searchDest.route)
                             onDismiss()
                         },
                         modifier = Modifier
@@ -135,9 +137,10 @@ fun FilterSection(title: String, items: List<String>) {
 @Composable
 fun PreviewFilterPopUp() {
     var showFilter by remember { mutableStateOf(false) }
+    val navController = rememberNavController()
 
     Scaffold(
     ) { innerPadding ->
-        FilterPopUp(onDismiss = { showFilter })
+        FilterPopUp(onDismiss = { showFilter }, navController)
     }
 }

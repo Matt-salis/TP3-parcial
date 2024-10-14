@@ -32,12 +32,15 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.screen.filter.FilterPopUp
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 
 @Composable
 fun SearchBar(
     searchQuery: String,
     onSearchQueryChange: (String) -> Unit,
+    navController: NavController,
     modifier: Modifier = Modifier
 ) {
     var showFilter by remember { mutableStateOf(false) }
@@ -67,7 +70,11 @@ fun SearchBar(
                 onValueChange = onSearchQueryChange,
                 modifier = Modifier.weight(1f),
                 keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Search),
-                keyboardActions = KeyboardActions.Default,
+                keyboardActions = KeyboardActions(
+                    onSearch = {
+                        navController.navigate(DestinationScreen.searchDest.route)
+                    }
+                ),
                 decorationBox = { innerTextField ->
                     if (searchQuery.isEmpty()) {
                         Text(text = "Search Store", color = Color.Gray)
@@ -90,7 +97,7 @@ fun SearchBar(
     }
     if (showFilter) {
         Dialog(onDismissRequest = { showFilter = false }, properties = DialogProperties(usePlatformDefaultWidth = false)) {
-            FilterPopUp(onDismiss = { showFilter = false })
+            FilterPopUp(onDismiss = { showFilter = false }, navController)
         }
     }
 }

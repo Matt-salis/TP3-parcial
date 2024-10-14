@@ -25,13 +25,13 @@ import com.example.parcial_grupo_8_ya.screen.categories.BeveragesScreen
 import com.example.parcial_grupo_8_ya.screen.checkout.Checkout
 import com.example.parcial_grupo_8_ya.screen.details.ProductDetails
 import com.example.parcial_grupo_8_ya.screen.explore.CategoryScreen
+import com.example.parcial_grupo_8_ya.screen.favorites.FavoritesScreen
 import com.example.parcial_grupo_8_ya.screen.login.LoginForm
 import com.example.parcial_grupo_8_ya.screen.onboarding.Onboarding
 import com.example.parcial_grupo_8_ya.screen.orderaccepted.OrderAcceptedScreen
 import com.example.parcial_grupo_8_ya.screen.register.RegisterScreen
 import com.example.parcial_grupo_8_ya.screen.search.SearchScreen
 import com.example.parcial_grupo_8_ya.screen.shop.Shop
-//import com.example.parcial_grupo_8_ya.screen.checkout.CheckoutScreenPreview
 
 
 sealed class DestinationScreen(val route: String) {
@@ -47,6 +47,7 @@ sealed class DestinationScreen(val route: String) {
     object exploreDest : DestinationScreen(route = "explore_screen")
     object searchDest : DestinationScreen(route = "search_screen")
     object orderAcceptedDest : DestinationScreen(route = "order_accepted_screen")
+    object favoriteDest : DestinationScreen(route = "favorite_screen")
     object myCartDest : DestinationScreen(route = "my_cart_screen")
 
 
@@ -96,53 +97,41 @@ fun NavigationScreen() {
         }
 
         composable(route = DestinationScreen.shopDest.route) {
-            Shop() // Pantalla de Shop
+            Shop(navController = navController) // Pantalla de Shop
         }
 
         composable(route = DestinationScreen.loginDest.route) {
-            LoginForm(
-                navController = navController
-            ) // Pantalla de Login
+            LoginForm(navController = navController)
         }
         composable(route = DestinationScreen.beveragesDest.route) {
-            BeveragesScreen(
-//                navController = navController
-            ) // Pantalla de Login
+            BeveragesScreen()
         }
         composable(route = DestinationScreen.signupDest.route) {
-            RegisterScreen(
-                navController = navController
-            ) // Pantalla de Registro
+            RegisterScreen(navController = navController)
         }
 
         composable(route = DestinationScreen.productDest.route) {
-            ProductDetails(
-//                navController = navController
-            ) // Pantalla de Registro
+            ProductDetails()
         }
 
         composable(route = DestinationScreen.accountDest.route) {
-            AccountScreenPreview(
-//                navController = navController
-            ) // Pantalla de Registro
+            AccountScreenPreview(navController = navController)
         }
 
         composable(route = DestinationScreen.exploreDest.route) {
-            CategoryScreen(
-//                navController = navController
-            ) // Pantalla de Registro
+            CategoryScreen(navController = navController)
         }
 
         composable(route = DestinationScreen.searchDest.route) {
-            SearchScreen(
-//                navController = navController
-            ) // Pantalla de Registro
+            SearchScreen(navController = navController)
         }
 
         composable(route = DestinationScreen.orderAcceptedDest.route) {
-            OrderAcceptedScreen(
-//                navController = navController
-            ) // Pantalla de Registro
+            OrderAcceptedScreen()
+        }
+
+        composable(route = DestinationScreen.favoriteDest.route) {
+            FavoritesScreen(navController = navController)
         }
         composable(route = DestinationScreen.myCartDest.route) {
             Checkout() // Pantalla de My Cart y Checkout
@@ -150,8 +139,6 @@ fun NavigationScreen() {
 
     }
 }
-
-
 
 
 @Composable

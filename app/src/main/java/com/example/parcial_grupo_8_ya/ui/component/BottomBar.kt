@@ -16,11 +16,14 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination.Companion.hierarchy
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -35,7 +38,7 @@ sealed class BottomNavItem(val route: String, val icon: ImageVector, val label: 
     object Shop : BottomNavItem(DestinationScreen.shopDest.route, Icons.Filled.Storefront, "Shop")
     object Explore : BottomNavItem(DestinationScreen.exploreDest.route, Icons.Filled.Search, "Explore")
     object Cart : BottomNavItem(DestinationScreen.myCartDest.route, Icons.Filled.ShoppingCart, "Cart")
-    object Favourite : BottomNavItem("favourite", Icons.Filled.Favorite, "Favourite")
+    object Favourite : BottomNavItem(DestinationScreen.favoriteDest.route, Icons.Filled.Favorite, "Favourite")
     object Account : BottomNavItem(DestinationScreen.accountDest.route, Icons.Filled.AccountBox, "Account")
 }
 
@@ -56,20 +59,25 @@ fun BottomNavigationBar(navController: NavController) {
         tonalElevation = 4.dp
     ) {
         NavigationBar(
-            containerColor = Color.Transparent
+            containerColor = if( !isSystemInDarkTheme() ) Color.White else Purple40,
+//            modifier = Modifier.clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))
         ) {
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val currentRoute = navBackStackEntry?.destination?.route
 
             BottomNavItems.forEach { item ->
-                val isSelected = currentRoute == item.route
+                val isSelected = currentRoute == item.route ||
+                        (item.route == DestinationScreen.exploreDest.route && currentRoute == DestinationScreen.searchDest.route)
 
                 NavigationBarItem(
                     selected = isSelected,
                     onClick = {
                         navController.navigate(item.route) {
-                            popUpTo(navController.graph.startDestinationId)
+                            popUpTo(navController.graph.startDestinationId) {
+                                saveState = true
+                            }
                             launchSingleTop = true
+                            restoreState = true
                         }
                     },
                     icon = {
