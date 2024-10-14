@@ -161,7 +161,7 @@ fun AccountOption(title: String, icon: Int, onClick: () -> Unit) {
 
         Text(text = title, fontSize = 20.sp, fontWeight = FontWeight.Medium)
 
-        Spacer(modifier = Modifier.weight(1f))
+        Spacer(modifier = Modifier.height(25.dp))
 
         Image(
             painter = painterResource(id = R.drawable.back_arrow), // Replace with your profile picture resource
