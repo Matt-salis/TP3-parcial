@@ -13,7 +13,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -36,16 +35,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.R
-import com.example.parcial_grupo_8_ya.data.model.Product
 import com.example.parcial_grupo_8_ya.screen.myCart.ProductCard
-import com.example.parcial_grupo_8_ya.screen.myCart.sampleProducts
-import com.example.parcial_grupo_8_ya.screen.shop.ShopScreen
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
 import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
-
 
 data class Product(
     val imageRes: Int,            
@@ -119,7 +113,6 @@ fun Checkout() {
 
 }
 
-
 @Composable
 fun CheckoutScreen(mod: Modifier, viewModel: CheckoutViewModel = viewModel()) {
     // Estado de visibilidad del checkout
@@ -130,24 +123,45 @@ fun CheckoutScreen(mod: Modifier, viewModel: CheckoutViewModel = viewModel()) {
             .fillMaxSize()
             .background(Color.White)
     ) {
-        // Lista de productos
-        LazyColumn(
+
+        Column(
             modifier = mod
-                //.weight(1f) // Hace que la lista sea scrolleable y ocupe el espacio disponible TODO: check
-                .fillMaxWidth()
+                .fillMaxSize()
         ) {
-            items(prods.size) { index ->
-                val product = prods[index]
-                ProductCard(
-                    imageRes = product.imageRes,
-                    productName = product.productName,
-                    productDescription = product.productDescription,
-                    productPrice = product.productPrice,
-                    quantity = product.quantity,
-                    onIncrement = { /* onincrement */ },
-                    onDecrement = { /* onDecrement */ },
-                    onClose = { /* onClose */ }
-                )
+            // Lista de productos
+            LazyColumn(
+                modifier = Modifier
+                    .weight(1f)
+                    .heightIn(max = 400.dp)
+                    .fillMaxWidth()
+            ) {
+                items(prods.size) { index ->
+                    val product = prods[index]
+                    ProductCard(
+                        imageRes = product.imageRes,
+                        productName = product.productName,
+                        productDescription = product.productDescription,
+                        productPrice = product.productPrice,
+                        quantity = product.quantity,
+                        onIncrement = { /* onIncrement */ },
+                        onDecrement = { /* onDecrement */ },
+                        onClose = { /* onClose */ }
+                    )
+                }
+            }
+
+            Button(
+                onClick = { viewModel.showCheckout() },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .width(364.dp)
+                    .padding(16.dp)
+                    .align(Alignment.CenterHorizontally)
+                    .height(60.dp),
+                shape = RoundedCornerShape(19.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4CAF50))
+            ) {
+                Text(text = "Go To Checkout", color = Color.White, fontSize = 16.sp)
             }
         }
 
@@ -181,16 +195,6 @@ fun CheckoutScreen(mod: Modifier, viewModel: CheckoutViewModel = viewModel()) {
                     CheckoutPopup(onClose = { viewModel.hideCheckout() })
                 }
             }
-        }
-
-        Button(
-            onClick = { viewModel.showCheckout() },
-            modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .padding(16.dp)
-                .zIndex(1f)
-        ) {
-            Text("Go To Checkout")
         }
     }
 }
@@ -234,7 +238,8 @@ fun CheckoutPopup(onClose: () -> Unit) {
                 }
             }
             HorizontalDivider(thickness = 1.dp, color = Color.LightGray, modifier = Modifier.fillMaxWidth())
-            LazyColumn {
+            LazyColumn ( modifier = Modifier
+            ) {
                 items(itemsList) { item ->
                     ListItem(
                         name = item.name,
@@ -248,8 +253,9 @@ fun CheckoutPopup(onClose: () -> Unit) {
 
             Button(
                 onClick = { /* place order click */ },
-                modifier = Modifier.fillMaxWidth()
-                                    .height(50.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
                 colors = ButtonDefaults.buttonColors(Color(0xFF53B175))
             ) {
                 Text(
@@ -270,7 +276,9 @@ data class ListItemData(
 @Composable
 fun ListItem(name: String, value: Any, onIconClick: () -> Unit) {
     Row(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 16.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
