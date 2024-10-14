@@ -34,7 +34,7 @@ import com.example.parcial_grupo_8_ya.ui.theme.Purple40
 sealed class BottomNavItem(val route: String, val icon: ImageVector, val label: String) {
     object Shop : BottomNavItem(DestinationScreen.shopDest.route, Icons.Filled.Storefront, "Shop")
     object Explore : BottomNavItem(DestinationScreen.exploreDest.route, Icons.Filled.Search, "Explore")
-    object Cart : BottomNavItem("cart", Icons.Filled.ShoppingCart, "Cart")
+    object Cart : BottomNavItem(DestinationScreen.myCartDest.route, Icons.Filled.ShoppingCart, "Cart")
     object Favourite : BottomNavItem("favourite", Icons.Filled.Favorite, "Favourite")
     object Account : BottomNavItem(DestinationScreen.accountDest.route, Icons.Filled.AccountBox, "Account")
 }

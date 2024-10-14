@@ -19,6 +19,7 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -36,11 +37,14 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.data.model.Product
 import com.example.parcial_grupo_8_ya.screen.myCart.ProductCard
 import com.example.parcial_grupo_8_ya.screen.myCart.sampleProducts
-
+import com.example.parcial_grupo_8_ya.screen.shop.ShopScreen
+import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
+import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 
 
 data class Product(
@@ -98,9 +102,26 @@ val prods = listOf(
     )
 )
 
+@Composable
+fun Checkout() {
+    val navController = rememberNavController()
+
+    Scaffold(
+        topBar = {
+            CustomTopBar(title = "Shop")
+        },
+        bottomBar = {
+            BottomNavigationBar(navController = navController)
+        }
+    ) { innerPadding ->
+        CheckoutScreen(Modifier.padding(innerPadding))
+    }
+
+}
+
 
 @Composable
-fun CheckoutScreen(navController: NavController, viewModel: CheckoutViewModel = viewModel()) {
+fun CheckoutScreen(mod: Modifier, viewModel: CheckoutViewModel = viewModel()) {
     // Estado de visibilidad del checkout
     val isCheckoutVisible by viewModel.isCheckoutVisible.collectAsState()
 
@@ -111,7 +132,7 @@ fun CheckoutScreen(navController: NavController, viewModel: CheckoutViewModel = 
     ) {
         // Lista de productos
         LazyColumn(
-            modifier = Modifier
+            modifier = mod
                 //.weight(1f) // Hace que la lista sea scrolleable y ocupe el espacio disponible TODO: check
                 .fillMaxWidth()
         ) {

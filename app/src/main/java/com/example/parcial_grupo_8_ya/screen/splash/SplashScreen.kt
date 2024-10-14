@@ -22,6 +22,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.screen.account.AccountScreenPreview
 import com.example.parcial_grupo_8_ya.screen.categories.BeveragesScreen
+import com.example.parcial_grupo_8_ya.screen.checkout.Checkout
 import com.example.parcial_grupo_8_ya.screen.details.ProductDetails
 import com.example.parcial_grupo_8_ya.screen.explore.CategoryScreen
 import com.example.parcial_grupo_8_ya.screen.login.LoginForm
@@ -46,6 +47,7 @@ sealed class DestinationScreen(val route: String) {
     object exploreDest : DestinationScreen(route = "explore_screen")
     object searchDest : DestinationScreen(route = "search_screen")
     object orderAcceptedDest : DestinationScreen(route = "order_accepted_screen")
+    object myCartDest : DestinationScreen(route = "my_cart_screen")
 
 
 }
@@ -99,7 +101,7 @@ fun NavigationScreen() {
 
         composable(route = DestinationScreen.loginDest.route) {
             LoginForm(
-//                navController = navController
+                navController = navController
             ) // Pantalla de Login
         }
         composable(route = DestinationScreen.beveragesDest.route) {
@@ -109,7 +111,7 @@ fun NavigationScreen() {
         }
         composable(route = DestinationScreen.signupDest.route) {
             RegisterScreen(
-//                navController = navController
+                navController = navController
             ) // Pantalla de Registro
         }
 
@@ -142,6 +144,10 @@ fun NavigationScreen() {
 //                navController = navController
             ) // Pantalla de Registro
         }
+        composable(route = DestinationScreen.myCartDest.route) {
+            Checkout() // Pantalla de My Cart y Checkout
+        }
+
     }
 }
 
