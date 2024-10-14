@@ -99,13 +99,18 @@ val prods = listOf(
 @Composable
 fun Checkout() {
     val navController = rememberNavController()
+    val viewModel: CheckoutViewModel = viewModel()
+    val isCheckoutVisible by viewModel.isCheckoutVisible.collectAsState()
+
 
     Scaffold(
         topBar = {
             CustomTopBar(title = "Shop")
         },
         bottomBar = {
-            BottomNavigationBar(navController = navController)
+            if (!isCheckoutVisible) { 
+                BottomNavigationBar(navController = navController)
+            }
         }
     ) { innerPadding ->
         CheckoutScreen(Modifier.padding(innerPadding))
