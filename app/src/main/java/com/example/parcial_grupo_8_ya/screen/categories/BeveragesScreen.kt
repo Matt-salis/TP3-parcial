@@ -35,6 +35,10 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -50,6 +54,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.data.model.Product
 import com.example.parcial_grupo_8_ya.screen.shop.ProductCard
@@ -64,9 +69,10 @@ val beverages = listOf(
     Product("9", "Pepsi Can", 4.99, "330ml", R.drawable.pepsi)
 )
 
-@Preview
+
 @Composable
-fun BeveragesScreen() {
+fun BeveragesScreen(navController: NavController) {
+    var returnToShop by remember { mutableStateOf(false) }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -74,7 +80,7 @@ fun BeveragesScreen() {
             .padding(8.dp),
         verticalArrangement = Arrangement.Top
     ) {
-        BeverageHeading()
+        BeverageHeading(returnToShop, navController)
         BeveragesCardList(beverages)
 
     }
@@ -82,7 +88,7 @@ fun BeveragesScreen() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun BeverageHeading() {
+fun BeverageHeading(returnToShop: Boolean, navController: NavController) {
     TopAppBar(
         title = {
             Box(
@@ -102,7 +108,9 @@ fun BeverageHeading() {
             }
         },
         navigationIcon = {
-            IconButton(onClick = { }) {
+            IconButton(onClick = {
+                    navController.popBackStack()
+            }) {
                 Icon(
                     Icons.Filled.ArrowBackIosNew,
                     contentDescription = "Arrow Back",

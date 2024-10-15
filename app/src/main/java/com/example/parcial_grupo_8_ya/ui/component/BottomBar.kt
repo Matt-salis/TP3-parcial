@@ -40,6 +40,7 @@ sealed class BottomNavItem(val route: String, val icon: ImageVector, val label: 
     object Cart : BottomNavItem(DestinationScreen.myCartDest.route, Icons.Filled.ShoppingCart, "Cart")
     object Favourite : BottomNavItem(DestinationScreen.favoriteDest.route, Icons.Filled.Favorite, "Favourite")
     object Account : BottomNavItem(DestinationScreen.accountDest.route, Icons.Filled.AccountBox, "Account")
+    //object Search : BottomNavItem(DestinationScreen.searchDest.route, Icons.Filled.Search, "Search")
 }
 
 val BottomNavItems = listOf(
@@ -48,6 +49,7 @@ val BottomNavItems = listOf(
     BottomNavItem.Cart,
     BottomNavItem.Favourite,
     BottomNavItem.Account,
+    //BottomNavItem.Search
 )
 
 @Composable
@@ -73,7 +75,7 @@ fun BottomNavigationBar(navController: NavController) {
                     selected = isSelected,
                     onClick = {
                         navController.navigate(item.route) {
-                            popUpTo(navController.graph.startDestinationId) {
+                            popUpTo(navController.graph.findStartDestination().id/*startDestinationId*/) {
                                 saveState = true
                             }
                             launchSingleTop = true

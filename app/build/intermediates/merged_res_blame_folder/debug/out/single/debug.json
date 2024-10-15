@@ -1,206 +1,242 @@
 [
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_meat_fish.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\meat_fish.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_beverages.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/beverages.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_diet_coke.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/diet_coke.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_orders_icon.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\orders_icon.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_dairy_eggs.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/dairy_eggs.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_logo_zanahoria_naranja.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\logo_zanahoria_naranja.xml"
-    },
-    {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_promo_cord_icon.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\promo_cord_icon.xml"
-    },
-    {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_location.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\location.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_grocery_bag.png.flat",
         "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/grocery_bag.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_eggless_mayonnaise.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\eggless_mayonnaise.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_banner.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/banner.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_logo_splash.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\logo_splash.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_back_arrow.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/back_arrow.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_delicery_address.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\delicery_address.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_jengibre_shop.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/jengibre_shop.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_apple.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\apple.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_promo_cord_icon.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/promo_cord_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_vector_icon.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\vector_icon.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_gradient_background.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\gradient_background.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_egg_noodles.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/egg_noodles.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_order_accepted.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/order_accepted.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_orders_icon.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/orders_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\xml\\backup_rules.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_orange_juice.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/orange_juice.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_meat_fish.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/meat_fish.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_sprite.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/sprite.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_bananas.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/bananas.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_beverages.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\beverages.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_bell_icon.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/bell_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_my_details_icon.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\my_details_icon.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_help_icon.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\help_icon.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_exit.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/exit.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_jengibre_shop.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\jengibre_shop.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_location.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/location.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_dairy_eggs.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\dairy_eggs.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_bakery_snacks.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/bakery_snacks.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_egg_noodles_fideos.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\egg_noodles_fideos.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_profilepic.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\profilepic.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_coca_cola.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/coca_cola.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_egg_white.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\egg_white.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_bananas.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\bananas.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_logo_splash.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/logo_splash.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_bell_icon.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\bell_icon.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_profilepic.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/profilepic.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_shop_icon.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\shop_icon.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_morrones.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\morrones.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_apple.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/apple.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_fondo_onboarding.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\fondo_onboarding.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_egg_noodles_fideos.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/egg_noodles_fideos.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_cooking_oil.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\cooking_oil.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/xml_backup_rules.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_exit.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\exit.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_egg_pasta.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/egg_pasta.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_back_arrow.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\back_arrow.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_egg_red.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/egg_red.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_logo_zanahoria.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\logo_zanahoria.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_fresh_fruits.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\fresh_fruits.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_gradient_background.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/gradient_background.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_logo_zanahoria_naranja.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/logo_zanahoria_naranja.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_bakery_snacks.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\bakery_snacks.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_payment.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/payment.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_fondo_onboarding.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/fondo_onboarding.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_egg_white.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/egg_white.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_egg_red.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\egg_red.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_egg_noodles.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\egg_noodles.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_banner.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\banner.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_my_details_icon.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/my_details_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_morrones.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/morrones.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\drawable_egg_pasta.png.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\drawable\\egg_pasta.png"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_apple_grape_juice.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/apple_grape_juice.png"
     },
     {
-        "merged": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-merged_res-60:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Karen\\.gradle\\daemon\\8.0\\com.example.parcial_grupo_8_ya.app-main-62:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_eggs.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/eggs.png"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_help_icon.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/help_icon.xml"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_pepsi.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/pepsi.png"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_cooking_oil.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/cooking_oil.png"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_delicery_address.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/delicery_address.xml"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_vector_icon.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/vector_icon.xml"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_eggless_mayonnaise.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/eggless_mayonnaise.png"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_logo_zanahoria.xml.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/logo_zanahoria.xml"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_apple_hero_image.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/apple_hero_image.png"
+    },
+    {
+        "merged": "com.example.parcial_grupo_8_ya.app-merged_res-60:/drawable_fresh_fruits.png.flat",
+        "source": "com.example.parcial_grupo_8_ya.app-main-62:/drawable/fresh_fruits.png"
     }
 ]

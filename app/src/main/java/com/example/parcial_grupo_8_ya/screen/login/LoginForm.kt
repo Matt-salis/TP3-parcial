@@ -4,6 +4,7 @@ package com.example.parcial_grupo_8_ya.screen.login
 
 import android.content.Context
 import android.widget.Toast
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -41,6 +42,7 @@ import com.example.parcial_grupo_8_ya.api.RetrofitClient
 import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
 import com.example.parcial_grupo_8_ya.screen.register.OverrideDefaultColors
 import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.viewModels.LoginViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
@@ -51,6 +53,7 @@ import retrofit2.Response
 fun LoginForm(
     navController: NavController
 ) {
+     val viewModel = LoginViewModel()
     Surface {
         GradientBackground()
         val context = LocalContext.current
@@ -84,7 +87,7 @@ fun LoginForm(
             PasswordField(
                 value = credentials.pwd,
                 onChange = { data -> credentials = credentials.copy(pwd = data) },
-                submit = { coroutineScope.launch { checkCredentials(credentials, context
+                submit = { coroutineScope.launch { viewModel.checkCredentials(credentials, context
                     , navController
                 ) } }
             )
@@ -97,7 +100,7 @@ fun LoginForm(
             // Login Button
             ButtonField(
                 text = "Login",
-                onClick = { coroutineScope.launch { checkCredentials(credentials, context
+                onClick = { coroutineScope.launch { viewModel.checkCredentials(credentials, context
                     , navController
                 ) } }
             )
@@ -175,27 +178,7 @@ fun SignUpPrompt(
     }
 }
 
-// API call para chequear credenciales
-private fun checkCredentials(credentials: Credentials, context: Context
-                            , navController: NavController
-) {
-    if (credentials.isNotEmpty()) {
-        RetrofitClient.instance.userLogin(credentials.login, credentials.pwd).enqueue(object : Callback<UsersListItem> {
-            override fun onResponse(call: Call<UsersListItem>, response: Response<UsersListItem>) {
-                if (response.isSuccessful) {
-                    Toast.makeText(context, "Sign In Successful", Toast.LENGTH_SHORT).show()
-                    navController.navigate(DestinationScreen.shopDest.route)
-                } else {
-                    Toast.makeText(context, "Invalid username or password", Toast.LENGTH_SHORT).show()
-                }
-            }
 
-            override fun onFailure(call: Call<UsersListItem>, t: Throwable) {
-                Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
-}
 
 data class Credentials(var login: String = "", var pwd: String = "") {
     fun isNotEmpty(): Boolean {

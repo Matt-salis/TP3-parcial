@@ -2,7 +2,6 @@ package com.example.parcial_grupo_8_ya.api
 
 import com.example.parcial_grupo_8_ya.data.model.User.UsersList
 import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
-import com.example.parcial_grupo_8_ya.repository.UsersRepository
 import com.example.parcial_grupo_8_ya.utils.Constants.BASE_URL
 import com.google.firebase.firestore.auth.User
 import retrofit2.Call

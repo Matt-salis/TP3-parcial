@@ -104,7 +104,7 @@ fun NavigationScreen() {
             LoginForm(navController = navController)
         }
         composable(route = DestinationScreen.beveragesDest.route) {
-            BeveragesScreen()
+            BeveragesScreen(navController = navController)
         }
         composable(route = DestinationScreen.signupDest.route) {
             RegisterScreen(navController = navController)

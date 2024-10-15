@@ -31,16 +31,19 @@ import com.example.parcial_grupo_8_ya.api.RetrofitClient
 import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
 import com.example.parcial_grupo_8_ya.screen.login.GradientBackground
 import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.viewModels.LoginViewModel
+import com.example.parcial_grupo_8_ya.viewModels.RegisterViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview
+
 @Composable
 fun RegisterScreen(
                    navController: NavController
 ) {
+    val viewModel = RegisterViewModel()
     var username by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -63,7 +66,7 @@ fun RegisterScreen(
         // Logo
         Logo()
 
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(40.dp))
 
         // Title
         SignUpTitle()
@@ -73,7 +76,7 @@ fun RegisterScreen(
         // Subtitle
         SignUpSubtitle()
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(40.dp))
 
         // Input Fields
         InputField("Username", username) { username = it }
@@ -91,11 +94,11 @@ fun RegisterScreen(
         // Agreement Text
         AgreementText()
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         // Sign Up Button
         SignUpButton(username, email, password, context
-            , navController
+            , navController, viewModel
         )
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -206,25 +209,11 @@ fun AgreementText() {
 
 @Composable
 fun SignUpButton(username: String, email: String, password: String, context: Context
-                 , navController: NavController
+                 , navController: NavController, viewModel: RegisterViewModel
 ) {
     Button(
         onClick = {
-            RetrofitClient.instance.createUser(username, email, password).enqueue(object: Callback<UsersListItem> {
-                override fun onResponse(call: Call<UsersListItem>, response: Response<UsersListItem>) {
-                    navController.navigate(DestinationScreen.locationDest.route)
-                    if (response.isSuccessful && username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
-                        Toast.makeText(context, "Sign In Successful", Toast.LENGTH_SHORT).show()
-                    navController.navigate(DestinationScreen.locationDest.route)
-                    } else {
-                        Toast.makeText(context, "Please fill all fields", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                override fun onFailure(call: Call<UsersListItem>, t: Throwable) {
-                    Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show()
-                }
-            })
+           viewModel.RegisterUser(username, email, password, context, navController)
         },
         shape = RoundedCornerShape(30.dp),
         colors = ButtonDefaults.buttonColors(Color(0xFF53B175)),
