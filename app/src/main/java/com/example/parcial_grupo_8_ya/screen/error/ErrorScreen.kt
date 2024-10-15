@@ -30,6 +30,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.parcial_grupo_8_ya.R
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 
 @Composable
 fun ErrorPopup(
@@ -88,18 +90,10 @@ fun ErrorPopup(
                         color = Color.Gray,
                         modifier = Modifier.padding(top = 8.dp, bottom = 16.dp)
                     )
-
-                    Button(
+                    CommonButton(
+                        text = "Please Try Again",
                         onClick = onRetry,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .width(364.dp)
-                            .height(50.dp),
-                        shape = RoundedCornerShape(19.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4CAF50))
-                    )  {
-                        Text(text = "Please Try Again", color = Color.White)
-                    }
+                    )
 
                     Spacer(modifier = Modifier.height(8.dp))
 

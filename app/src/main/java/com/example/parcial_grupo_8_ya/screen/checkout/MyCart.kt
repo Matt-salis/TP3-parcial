@@ -8,26 +8,22 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.screen.myCart.ProductCard
-import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
 import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
+import com.example.parcial_grupo_8_ya.viewModels.CheckoutViewModel
 
 data class Product(
     val imageRes: Int,            
@@ -146,7 +142,6 @@ fun MyCartScreen(mod: Modifier, viewModel: CheckoutViewModel = viewModel(), navC
                     )
                 }
             }
-
             CommonButton(
                 text = "Go To Checkout",
                 onClick = {viewModel.showCheckout()}

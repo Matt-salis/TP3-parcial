@@ -40,6 +40,7 @@ import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.data.model.Product
 import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
+import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 
 @Composable
 fun Favorites(
@@ -65,20 +66,10 @@ fun Favorites(
                 HorizontalDivider(thickness = 0.2.dp, color = Color.Gray)
             }
         }
-
-        Button(
-            onClick = {
-                showError = true
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .width(364.dp)
-                .height(60.dp),
-            shape = RoundedCornerShape(19.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4CAF50))
-        ) {
-            Text(text = "Add All To Cart", color = Color.White, fontSize = 16.sp)
-        }
+        CommonButton(
+            text = "Add All To Cart",
+            onClick = { showError = true}
+        )
 
         if (showError) {
             com.example.parcial_grupo_8_ya.screen.error.ErrorPopup(

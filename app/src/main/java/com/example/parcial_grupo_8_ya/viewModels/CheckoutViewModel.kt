@@ -1,4 +1,4 @@
-package com.example.parcial_grupo_8_ya.screen.checkout
+package com.example.parcial_grupo_8_ya.viewModels
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
