@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -32,6 +33,7 @@ import com.example.parcial_grupo_8_ya.screen.orderaccepted.OrderAcceptedScreen
 import com.example.parcial_grupo_8_ya.screen.register.RegisterScreen
 import com.example.parcial_grupo_8_ya.screen.search.SearchScreen
 import com.example.parcial_grupo_8_ya.screen.shop.Shop
+import com.example.parcial_grupo_8_ya.viewModels.SearchViewModel
 
 
 sealed class DestinationScreen(val route: String) {
@@ -79,6 +81,7 @@ fun DesignSplashScreen(
 @Composable
 fun NavigationScreen() {
     val navController = rememberNavController()
+    val searchViewModel: SearchViewModel = viewModel()
 
     NavHost(
         navController = navController,
@@ -119,11 +122,11 @@ fun NavigationScreen() {
         }
 
         composable(route = DestinationScreen.exploreDest.route) {
-            CategoryScreen(navController = navController)
+            CategoryScreen(navController = navController, searchViewModel = searchViewModel)
         }
 
         composable(route = DestinationScreen.searchDest.route) {
-            SearchScreen(navController = navController)
+            SearchScreen(navController = navController, searchViewModel = searchViewModel)
         }
 
         composable(route = DestinationScreen.orderAcceptedDest.route) {

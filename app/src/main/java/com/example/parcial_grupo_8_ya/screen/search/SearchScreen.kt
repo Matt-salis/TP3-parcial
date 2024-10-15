@@ -12,24 +12,20 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.data.model.Product
 import com.example.parcial_grupo_8_ya.screen.shop.ProductCard
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
 import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 import com.example.parcial_grupo_8_ya.ui.component.SearchBar
+import com.example.parcial_grupo_8_ya.viewModels.SearchViewModel
 
 @Composable
-fun SearchScreen(navController: NavController) {
-    var searchQuery by remember { mutableStateOf("") }
+fun SearchScreen(navController: NavController, searchViewModel: SearchViewModel) {
+    val searchQuery by searchViewModel.searchQuery
 
     Scaffold(
         topBar = {
@@ -40,7 +36,7 @@ fun SearchScreen(navController: NavController) {
         }
     ) { paddingValues ->
         Column(modifier = Modifier.padding(paddingValues)) {
-            SearchBar(searchQuery, { newQuery -> searchQuery = newQuery }, navController, modifier = Modifier.padding(16.dp))
+            SearchBar(searchQuery, { newQuery -> searchViewModel.updateSearchQuery(newQuery) }, navController, modifier = Modifier.padding(16.dp))
             Spacer(modifier = Modifier.height(8.dp))
             ProductGrid(products = sampleProducts())
         }

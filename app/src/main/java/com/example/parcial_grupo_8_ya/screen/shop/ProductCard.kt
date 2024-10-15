@@ -63,10 +63,10 @@ fun ProductCard(
             Text(
                 text = productDescription,
                 fontSize = 12.sp,
-                modifier = Modifier.align(Alignment.Start)
+                modifier = Modifier.align(Alignment.Start).weight(1f)
             )
 
-            Spacer(modifier = Modifier.weight(1f))
+            Spacer(modifier = Modifier.height(8.dp))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),

@@ -17,34 +17,27 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.data.model.Category
 import com.example.parcial_grupo_8_ya.data.model.getCategories
 import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
 import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 import com.example.parcial_grupo_8_ya.ui.component.SearchBar
+import com.example.parcial_grupo_8_ya.viewModels.SearchViewModel
 
 @Composable
-fun Category(navController: NavController, modifier: Modifier = Modifier) {
-    var searchQuery by remember { mutableStateOf("") }
+fun Category(navController: NavController, modifier: Modifier = Modifier, searchViewModel: SearchViewModel) {
 
     Column(
         modifier = modifier
@@ -54,8 +47,8 @@ fun Category(navController: NavController, modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SearchBar(
-            searchQuery = searchQuery,
-            onSearchQueryChange = { newQuery -> searchQuery = newQuery },
+            searchQuery = searchViewModel.searchQuery.value,
+            onSearchQueryChange = { newQuery -> searchViewModel.updateSearchQuery(newQuery) },
             navController = navController
         )
         Spacer(modifier = Modifier.height(18.dp))
@@ -104,7 +97,6 @@ fun CategoryCard(category: Category, navController: NavController) {
                 contentScale = ContentScale.FillWidth,
                 modifier = Modifier.size(80.dp)
             )
-            Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = category.name,
                 fontWeight = FontWeight.Bold,
@@ -125,7 +117,7 @@ fun Color.darker(): Color {
 
 
 @Composable
-fun CategoryScreen(navController: NavController) {
+fun CategoryScreen(navController: NavController, searchViewModel: SearchViewModel) {
     Scaffold(
         topBar = {
             CustomTopBar(title = "Find Products")
@@ -134,6 +126,6 @@ fun CategoryScreen(navController: NavController) {
             BottomNavigationBar(navController = navController)
         }
     ) { innerPadding ->
-        Category(navController, Modifier.padding(innerPadding))
+        Category(navController, Modifier.padding(innerPadding), searchViewModel = searchViewModel)
     }
 }
