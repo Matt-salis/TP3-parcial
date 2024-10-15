@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.data.model.Category
 import com.example.parcial_grupo_8_ya.data.model.getCategories
-import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.navegation.DestinationScreen
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
 import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 import com.example.parcial_grupo_8_ya.ui.component.SearchBar

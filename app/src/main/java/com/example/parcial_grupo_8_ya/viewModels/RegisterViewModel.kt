@@ -6,8 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.api.RetrofitClient
 import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
-import com.example.parcial_grupo_8_ya.screen.login.Credentials
-import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.navegation.DestinationScreen
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

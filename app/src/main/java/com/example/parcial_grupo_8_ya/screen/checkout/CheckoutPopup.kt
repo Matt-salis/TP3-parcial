@@ -38,7 +38,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
-import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.navegation.DestinationScreen
 import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 
 @Composable

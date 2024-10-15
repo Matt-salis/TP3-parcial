@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.navegation.DestinationScreen
 
 @Composable
 fun FilterPopUp(onDismiss: () -> Unit, navController: NavController) {

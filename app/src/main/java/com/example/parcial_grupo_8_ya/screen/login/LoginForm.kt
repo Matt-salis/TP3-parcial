@@ -2,15 +2,10 @@
 
 package com.example.parcial_grupo_8_ya.screen.login
 
-import android.content.Context
-import android.widget.Toast
-import androidx.activity.ComponentActivity
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.Arrangement.End
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -33,21 +28,15 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
-import com.example.parcial_grupo_8_ya.api.RetrofitClient
-import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
+import com.example.parcial_grupo_8_ya.navegation.DestinationScreen
 import com.example.parcial_grupo_8_ya.screen.register.OverrideDefaultColors
-import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import com.example.parcial_grupo_8_ya.viewModels.LoginViewModel
 import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 import kotlinx.coroutines.launch
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 @Composable
