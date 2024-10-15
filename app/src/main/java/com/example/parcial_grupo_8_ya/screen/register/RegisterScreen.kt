@@ -212,7 +212,7 @@ fun SignUpButton(username: String, email: String, password: String, context: Con
 ) {
     Button(
         onClick = {
-           viewModel.RegisterUser(username, email, password, context, navController)
+           viewModel.registerUser(username, email, password, context, navController)
         },
         shape = RoundedCornerShape(30.dp),
         colors = ButtonDefaults.buttonColors(Color(0xFF53B175)),

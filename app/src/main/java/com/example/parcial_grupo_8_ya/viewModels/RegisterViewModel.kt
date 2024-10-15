@@ -2,6 +2,7 @@ package com.example.parcial_grupo_8_ya.viewModels
 
 import android.content.Context
 import android.widget.Toast
+import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.api.RetrofitClient
 import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
@@ -11,9 +12,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RegisterViewModel {
+class RegisterViewModel : ViewModel() {
     // API call para registrar usuario
-    fun RegisterUser(username : String, email : String, password : String, context: Context
+    fun registerUser(username : String, email : String, password : String, context: Context
                      , navController: NavController
     ) {
 

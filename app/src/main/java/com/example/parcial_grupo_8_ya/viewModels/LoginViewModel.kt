@@ -2,6 +2,7 @@ package com.example.parcial_grupo_8_ya.viewModels
 
 import android.content.Context
 import android.widget.Toast
+import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.api.RetrofitClient
 import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
@@ -11,7 +12,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LoginViewModel  {
+class LoginViewModel : ViewModel() {
 
     // API call para chequear credenciales
     fun checkCredentials(credentials: Credentials, context: Context
