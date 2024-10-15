@@ -75,7 +75,7 @@ fun NavigationScreen() {
         }
 
         composable(route = DestinationScreen.productDest.route) {
-            ProductDetails()
+            ProductDetails(navController = navController)
         }
 
         composable(route = DestinationScreen.accountDest.route) {

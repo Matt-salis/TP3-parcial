@@ -125,6 +125,7 @@ drawable common_google_signin_btn_text_light_normal_background
 drawable cooking_oil
 drawable dairy_eggs
 drawable delicery_address
+drawable details
 drawable diet_coke
 drawable egg_noodles
 drawable egg_noodles_fideos
@@ -134,6 +135,7 @@ drawable egg_white
 drawable eggless_mayonnaise
 drawable eggs
 drawable exit
+drawable favorite
 drawable fondo_onboarding
 drawable fresh_fruits
 drawable googleg_disabled_color_18
@@ -178,6 +180,7 @@ drawable payment
 drawable pepsi
 drawable profilepic
 drawable promo_cord_icon
+drawable review
 drawable sprite
 drawable vector_icon
 id accessibility_action_clickable_span

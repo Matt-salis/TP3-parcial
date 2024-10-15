@@ -42,26 +42,29 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
+import com.example.parcial_grupo_8_ya.navegation.DestinationScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview
+
 @Composable
-fun ProductDetails() {
+fun ProductDetails(navController: NavController) {
     Surface {
         Column {
-            ProductDetailBar()
-            ProductInfo()
+            ProductDetailBar(navController)
+            ProductInfo(navController)
         }
     }
 }
 
 @Composable
-fun ProductInfo() {
+fun ProductInfo(navController: NavController) {
     val firstTitle = "Product Detail"
     val secondTitle = "Nutritions"
     val thirdTitle = "Review"
-    val appleDesc = "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthy and varied diet."
+    val appleDesc =
+        "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthy and varied diet."
 
     LazyColumn(
         modifier = Modifier
@@ -92,7 +95,7 @@ fun ProductInfo() {
                 ExpandableBox(thirdTitle, "")
                 Spacer(modifier = Modifier.height(24.dp))
 
-                AddToBasketButton()
+                AddToBasketButton(navController)
                 Spacer(modifier = Modifier.height(16.dp))
             }
         }
@@ -101,9 +104,11 @@ fun ProductInfo() {
 
 @Composable
 fun ProductImage() {
-    Box(modifier = Modifier
-        .background(Color.LightGray, shape = RoundedCornerShape(12.dp))
-        .fillMaxWidth()) {
+    Box(
+        modifier = Modifier
+            .background(Color.LightGray, shape = RoundedCornerShape(12.dp))
+            .fillMaxWidth()
+    ) {
         Image(
             painter = painterResource(id = R.drawable.apple_hero_image),
             contentDescription = "Product Image",
@@ -138,15 +143,15 @@ fun PriceTextField(price: String) {
 }
 
 @Composable
-fun AddToBasketButton() {
+fun AddToBasketButton(navController: NavController) {
     Button(
-        onClick = { /* Handle Add to Basket */ },
+        onClick = { navController.navigate(DestinationScreen.shopDest.route) },
         shape = RoundedCornerShape(30.dp),
         colors = ButtonDefaults.buttonColors(Color(0xFF53B175)),
         contentPadding = PaddingValues(),
         modifier = Modifier
             .size(width = 350.dp, height = 60.dp)
-            .padding(start = 15.dp)
+            .padding(start = 25.dp)
     ) {
         Text("Add To Basket", fontSize = 16.sp)
     }
@@ -164,8 +169,10 @@ fun ExpandableBox(title: String, description: String) {
                 fontSize = 18.sp
             )
 
-            Icon(imageVector = (if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore),
-                contentDescription = "Expand Arrow")
+            Icon(
+                imageVector = (if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore),
+                contentDescription = "Expand Arrow"
+            )
         }
         if (expanded) {
             Text(
@@ -184,7 +191,7 @@ fun ExpandableBox(title: String, description: String) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProductDetailBar() {
+fun ProductDetailBar(navController: NavController) {
     TopAppBar(
         title = {
             Text(
@@ -198,7 +205,7 @@ fun ProductDetailBar() {
             )
         },
         navigationIcon = {
-            IconButton(onClick = { /* Handle back navigation */ }) {
+            IconButton(onClick = {navController.popBackStack() }) {
                 Icon(
                     Icons.Filled.ArrowBackIosNew,
                     contentDescription = "ArrowBack",
@@ -231,7 +238,10 @@ fun ItemQuantity() {
                 onClick = { if (itemCount > 0) itemCount-- },
                 shape = RoundedCornerShape(30.dp),
                 modifier = Modifier.size(48.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent, contentColor = Color.Gray),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Transparent,
+                    contentColor = Color.Gray
+                ),
             ) {
                 Text("-", fontSize = 30.sp)
             }
@@ -243,13 +253,16 @@ fun ItemQuantity() {
                 fontSize = 20.sp,
                 modifier = Modifier.padding(horizontal = 16.dp),
 
-            )
+                )
 
             TextButton(
                 onClick = { itemCount++ },
                 shape = RoundedCornerShape(30.dp),
                 modifier = Modifier.size(48.dp),
-                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF53B175), containerColor = Color.Transparent)
+                colors = ButtonDefaults.outlinedButtonColors(
+                    contentColor = Color(0xFF53B175),
+                    containerColor = Color.Transparent
+                )
             ) {
                 Text("+", fontSize = 30.sp)
             }

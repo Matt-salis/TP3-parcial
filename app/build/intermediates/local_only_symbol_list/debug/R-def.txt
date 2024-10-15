@@ -20,6 +20,7 @@ drawable coca_cola
 drawable cooking_oil
 drawable dairy_eggs
 drawable delicery_address
+drawable details
 drawable diet_coke
 drawable egg_noodles
 drawable egg_noodles_fideos
@@ -29,6 +30,7 @@ drawable egg_white
 drawable eggless_mayonnaise
 drawable eggs
 drawable exit
+drawable favorite
 drawable fondo_onboarding
 drawable fresh_fruits
 drawable gradient_background
@@ -51,6 +53,7 @@ drawable payment
 drawable pepsi
 drawable profilepic
 drawable promo_cord_icon
+drawable review
 drawable sprite
 drawable vector_icon
 mipmap ic_launcher

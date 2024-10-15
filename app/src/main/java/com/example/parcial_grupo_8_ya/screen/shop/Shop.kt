@@ -26,6 +26,7 @@ import androidx.compose.material3.Scaffold
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.data.model.Product
+import com.example.parcial_grupo_8_ya.navegation.DestinationScreen
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
 import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 
@@ -39,13 +40,13 @@ fun Shop(navController: NavController) {
             BottomNavigationBar(navController = navController)
         }
     ) { innerPadding ->
-        ShopScreen(Modifier.padding(innerPadding))
+        ShopScreen(Modifier.padding(innerPadding), navController)
     }
 
 }
 
 @Composable
-fun ShopScreen(padding: Modifier) {
+fun ShopScreen(padding: Modifier, navController: NavController) {
 
     val exclusiveOfferProducts = listOf(
         Product("1", "Organic Bananas", 4.99, "7pcs, Price", R.drawable.bananas),
@@ -85,17 +86,17 @@ fun ShopScreen(padding: Modifier) {
             }
             Spacer(modifier = Modifier.height(24.dp))
 
-            ProductSection(title = "Exclusive Offer")
-            ProductCardList(products = exclusiveOfferProducts)
+            ProductSection(title = "Exclusive Offer", navController)
+            ProductCardList(products = exclusiveOfferProducts, navController)
 
-            ProductSection(title = "Best Selling")
-            ProductCardList(products = bestSellingProducts)
+            ProductSection(title = "Best Selling", navController)
+            ProductCardList(products = bestSellingProducts, navController)
         }
     }
 }
 
 @Composable
-fun ProductSection(title: String) {
+fun ProductSection(title: String, navController: NavController) {
     Row(
         modifier = Modifier.fillMaxWidth().padding(16.dp),
         verticalAlignment = Alignment.Bottom,
@@ -114,13 +115,13 @@ fun ProductSection(title: String) {
             fontWeight = FontWeight.Bold,
             color = Color(0xFF53B175),
             modifier = Modifier
-                .clickable { /* Action para ver todo */ }
+                .clickable { navController.navigate(DestinationScreen.exploreDest.route) }
         )
     }
 }
 
 @Composable
-fun ProductCardList(products: List<Product>) {
+fun ProductCardList(products: List<Product>, navController: NavController) {
     LazyRow(
         modifier = Modifier
             .fillMaxWidth()
@@ -134,7 +135,7 @@ fun ProductCardList(products: List<Product>) {
                 productDescription = product.description,
                 productPrice =  "$${product.price}",
                 productImageRes = product.image,
-                onAddToCartClick = { /* Manejar la acción de agregar al carrito */ }
+                onAddToCartClick = { navController.navigate(DestinationScreen.productDest.route) }
             )
         }
     }
