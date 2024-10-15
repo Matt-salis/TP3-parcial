@@ -6,55 +6,50 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
+import com.example.parcial_grupo_8_ya.navegation.DestinationScreen
+import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 
-@Preview
 @Composable
-fun Onboarding() {
-    OnboardingScreen()
+fun Onboarding(navController: NavController) {
+    OnboardingScreen(navController)
 }
 
 @Composable
-fun OnboardingScreen() {
+fun OnboardingScreen(navController: NavController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF53B175)) // Color de fondo
+            .background(Color(0xFF53B175))
     ) {
-        // Imagen de fondo
+
         Image(
             painter = painterResource(id = R.drawable.fondo_onboarding),
             contentDescription = "Fondo onboarding",
             contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxSize() // Ocupa todo el espacio
+            modifier = Modifier.fillMaxSize()
         )
 
-        // Contenido superpuesto
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp), // Padding para no estar pegado a los bordes
+                .padding(16.dp),
             verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -63,10 +58,10 @@ fun OnboardingScreen() {
                     painter = painterResource(id = R.drawable.logo_zanahoria),
                     contentDescription = "Logotipo Zanahoria",
                     contentScale = ContentScale.FillWidth,
-                    modifier = Modifier.width(70.dp)
+                    modifier = Modifier.width(50.dp)
                 )
             }
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(26.dp))
             Text(
                 text = "Welcome",
                 fontSize = 32.sp,
@@ -81,24 +76,12 @@ fun OnboardingScreen() {
             )
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Texto pequeño
-            Text(
-                text = "Get your groceries in as fast as one hour",
-                fontSize = 18.sp,
-                color = Color.White
-            )
 
             Spacer(modifier = Modifier.height(32.dp))
-
-            // Botón
-            Button(onClick = { /* Acción del botón */ },
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF53B175)),
-                modifier = Modifier.fillMaxWidth(0.8f).height(60.dp),
-                shape = RoundedCornerShape(30),
-            ) {
-                Text(text = "Get Started", fontSize = 18.sp)
-            }
-
+            CommonButton(
+                text = "Get Started",
+                onClick = {navController.navigate(DestinationScreen.loginDest.route)}
+            )
             Spacer(modifier = Modifier.height(32.dp))
         }
     }
