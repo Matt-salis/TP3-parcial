@@ -22,7 +22,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.screen.account.AccountScreenPreview
 import com.example.parcial_grupo_8_ya.screen.categories.BeveragesScreen
-import com.example.parcial_grupo_8_ya.screen.checkout.Checkout
+import com.example.parcial_grupo_8_ya.screen.checkout.MyCart
 import com.example.parcial_grupo_8_ya.screen.details.ProductDetails
 import com.example.parcial_grupo_8_ya.screen.explore.CategoryScreen
 import com.example.parcial_grupo_8_ya.screen.favorites.FavoritesScreen
@@ -93,7 +93,7 @@ fun NavigationScreen() {
         }
 
         composable(route = DestinationScreen.locationDest.route) {
-            LocationScreenPreview(navController = navController) // Pantalla de onboarding
+            LocationScreenPreview(navController = navController)
         }
 
         composable(route = DestinationScreen.shopDest.route) {
@@ -127,14 +127,14 @@ fun NavigationScreen() {
         }
 
         composable(route = DestinationScreen.orderAcceptedDest.route) {
-            OrderAcceptedScreen()
+            OrderAcceptedScreen(navController = navController)
         }
 
         composable(route = DestinationScreen.favoriteDest.route) {
             FavoritesScreen(navController = navController)
         }
         composable(route = DestinationScreen.myCartDest.route) {
-            Checkout() // Pantalla de My Cart y Checkout
+            MyCart(navController = navController)
         }
 
     }

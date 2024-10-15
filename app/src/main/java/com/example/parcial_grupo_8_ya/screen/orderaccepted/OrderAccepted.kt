@@ -30,13 +30,21 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.screen.login.GradientBackground
+import com.example.parcial_grupo_8_ya.screen.onboarding.OnboardingScreen
+import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 
 @Composable
-@Preview
+fun OrderAccepted(navController: NavController) {
+    OrderAcceptedScreen(navController)
+}
 
-fun OrderAcceptedScreen() {
+@Composable
+
+fun OrderAcceptedScreen(navController: NavController) {
     FadeInTransition()
 
     Surface{
@@ -66,8 +74,6 @@ fun OrderAcceptedScreen() {
             )
 
             Spacer(modifier = Modifier.height(20.dp))
-
-
             // Descripcion
             Text(
                 text = "Your items have been placed and is on it's way to being processed",
@@ -79,20 +85,13 @@ fun OrderAcceptedScreen() {
 
             // Buttons
             Spacer(modifier = Modifier.height(110.dp))
-            Button(
-                onClick = { TODO()},
-                shape = RoundedCornerShape(30.dp),
-                colors = ButtonDefaults.buttonColors(Color(0xFF53B175)),
-                contentPadding = PaddingValues(),
-                modifier = Modifier
-                    .size(width = 350.dp, height = 60.dp)
-                    .padding(start = 8.dp) // padding para centrar boton
-            ) {
-                Text("Track Order")
-            }
+            CommonButton(
+                text = "Track Order",
+                onClick = {navController.navigate(DestinationScreen.orderAcceptedDest.route)}
+            )
             Spacer(modifier = Modifier.height(8.dp))
             Button(
-                onClick = { TODO() },
+                onClick = { navController.navigate(DestinationScreen.shopDest.route) },
                 shape = RoundedCornerShape(30.dp),
                 colors = ButtonDefaults.buttonColors(Color.Transparent),
                 contentPadding = PaddingValues(),
