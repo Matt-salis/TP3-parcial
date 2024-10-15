@@ -38,7 +38,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 @OptIn(ExperimentalMaterial3Api::class)
-
 @Composable
 fun RegisterScreen(
                    navController: NavController

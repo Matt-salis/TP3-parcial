@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -87,16 +88,10 @@ fun LocationScreen(navController : NavController) {
             Spacer(modifier = Modifier.height(20.dp))
 
             // Button
-            Button(
-                onClick = { navController.navigate(DestinationScreen.shopDest.route) },
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF53B175)),
-                modifier = Modifier
-                    .fillMaxWidth(0.8f)
-                    .height(60.dp),
-                shape = RoundedCornerShape(30),
-            ) {
-                Text(text = "Submit", fontSize = 18.sp)
-            }
+            CommonButton(
+               text = "Submit",
+               onClick = {navController.navigate(DestinationScreen.shopDest.route)}
+            )
         }
     }
 }

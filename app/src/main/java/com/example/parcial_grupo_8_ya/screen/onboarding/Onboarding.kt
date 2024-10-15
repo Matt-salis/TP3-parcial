@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.parcial_grupo_8_ya.R
 import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
+import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 
 @Composable
 fun Onboarding(navController: NavController) {
@@ -80,23 +81,11 @@ fun OnboardingScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(16.dp))
 
             // Texto pequeño
-            Text(
-                text = "Get your groceries in as fast as one hour",
-                fontSize = 18.sp,
-                color = Color.White
-            )
-
             Spacer(modifier = Modifier.height(32.dp))
-
-            // Botón
-            Button(onClick = {navController.navigate(DestinationScreen.loginDest.route)},
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF53B175)),
-                modifier = Modifier.fillMaxWidth(0.8f).height(60.dp),
-                shape = RoundedCornerShape(30),
-            ) {
-                Text(text = "Get Started", fontSize = 18.sp)
-            }
-
+            CommonButton(
+                text = "Get Started",
+                onClick = {navController.navigate(DestinationScreen.loginDest.route)}
+            )
             Spacer(modifier = Modifier.height(32.dp))
         }
     }

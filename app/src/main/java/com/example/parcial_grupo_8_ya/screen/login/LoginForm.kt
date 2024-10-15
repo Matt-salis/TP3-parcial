@@ -43,6 +43,7 @@ import com.example.parcial_grupo_8_ya.data.model.User.UsersListItem
 import com.example.parcial_grupo_8_ya.screen.register.OverrideDefaultColors
 import com.example.parcial_grupo_8_ya.screen.splash.DestinationScreen
 import com.example.parcial_grupo_8_ya.viewModels.LoginViewModel
+import com.example.parcial_grupo_8_ya.ui.component.CommonButton
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
@@ -98,8 +99,8 @@ fun LoginForm(
             Spacer(modifier = Modifier.height(16.dp))
 
             // Login Button
-            ButtonField(
-                text = "Login",
+            CommonButton(
+                text = "Log In",
                 onClick = { coroutineScope.launch { viewModel.checkCredentials(credentials, context
                     , navController
                 ) } }
