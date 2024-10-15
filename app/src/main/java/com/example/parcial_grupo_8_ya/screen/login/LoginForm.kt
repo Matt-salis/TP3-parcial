@@ -77,14 +77,13 @@ fun LoginForm(
             Subtitle("Enter your email and password")
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Email Field
             LoginField(
                 value = credentials.login,
                 onChange = { data -> credentials = credentials.copy(login = data) }
             )
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Password Field
+
             PasswordField(
                 value = credentials.pwd,
                 onChange = { data -> credentials = credentials.copy(pwd = data) },
@@ -94,11 +93,11 @@ fun LoginForm(
             )
             Spacer(modifier = Modifier.height(8.dp))
 
-            // Forgot Password
-            ForgotPassword { /* Handle forgot password action */ }
+
+            ForgotPassword {}
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Login Button
+
             CommonButton(
                 text = "Log In",
                 onClick = { coroutineScope.launch { viewModel.checkCredentials(credentials, context
@@ -107,7 +106,6 @@ fun LoginForm(
             )
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Sign Up CTA
             SignUpPrompt(
                 navController
             )
@@ -214,12 +212,6 @@ fun PasswordField(value : String,
 
     var isPasswordVisible by remember { mutableStateOf(false) }
 
-//    val leadingIcon = @Composable {
-//        Icon(
-//            Icons.Default.Key,
-//            contentDescription = "",
-//            tint = MaterialTheme.colorScheme.primary)
-//    }
     val trailingIcon = @Composable {
         IconButton(onClick = { isPasswordVisible = !isPasswordVisible }, interactionSource = remember { MutableInteractionSource() }) {
             Icon(
@@ -234,7 +226,6 @@ fun PasswordField(value : String,
         value = value,
         onValueChange = onChange,
         modifier = Modifier.fillMaxWidth(),
-//        leadingIcon = leadingIcon,
         trailingIcon = trailingIcon,
         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done,
             keyboardType = KeyboardType.Password),

@@ -14,7 +14,6 @@ import retrofit2.Response
 
 class LoginViewModel : ViewModel() {
 
-    // API call para chequear credenciales
     fun checkCredentials(credentials: Credentials, context: Context
                                  , navController: NavController
     ) {

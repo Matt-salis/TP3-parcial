@@ -124,7 +124,7 @@ fun sampleFavorites(): List<Product> {
     )
 }
 
-//@Preview(showBackground = true)
+
 @Composable
 fun FavoritesScreen(navController: NavController) {
     Scaffold(

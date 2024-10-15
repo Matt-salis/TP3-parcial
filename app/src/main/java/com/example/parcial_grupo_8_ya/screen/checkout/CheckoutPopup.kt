@@ -52,7 +52,7 @@ fun CheckoutPopup(onClose: () -> Unit, navController: NavController) {
             .background(Color.White)
             .zIndex(2f)
             .padding(16.dp),
-        //contentAlignment = Alignment.TopCenter
+
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -130,7 +130,7 @@ fun ListItem(name: String, value: Any, onIconClick: () -> Unit) {
         ) {
             when (value) {
                 is Int -> {
-                    // Si es un icono, mostrar la imagen
+
                     Image(
                         painter = painterResource(id = value),
                         contentDescription = null,

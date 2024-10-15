@@ -71,27 +71,24 @@ fun ProductInfo() {
     ) {
         item {
             Column {
-                //Imagen
+
                 ProductImage()
                 Spacer(modifier = Modifier.height(15.dp))
-                //Titulo del producto
+
                 ProductDetailsText()
                 Spacer(modifier = Modifier.height(1.dp))
-                //Precio y peso
+
                 PriceTextField(price = "1kg, Price")
 
-                //Item selector
+
                 ItemQuantity()
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                //Product Detail Box
                 ExpandableBox(firstTitle, appleDesc)
                 Spacer(modifier = Modifier.height(24.dp))
-                //Nutritions Box
                 ExpandableBox(secondTitle, "")
                 Spacer(modifier = Modifier.height(24.dp))
-                //Review Box
                 ExpandableBox(thirdTitle, "")
                 Spacer(modifier = Modifier.height(24.dp))
 
@@ -149,7 +146,7 @@ fun AddToBasketButton() {
         contentPadding = PaddingValues(),
         modifier = Modifier
             .size(width = 350.dp, height = 60.dp)
-            .padding(start = 15.dp) // padding para centrar boton
+            .padding(start = 15.dp)
     ) {
         Text("Add To Basket", fontSize = 16.sp)
     }
@@ -174,9 +171,9 @@ fun ExpandableBox(title: String, description: String) {
             Text(
                 text = description,
                 modifier = Modifier
-                    .padding(start = 16.dp, top = 10.dp) // agrego padding para que no se pegue al title
+                    .padding(start = 16.dp, top = 10.dp)
                     .scale(0.9f)
-                    .widthIn(max = 300.dp), // Ancho fijo para que se corte el interlineado
+                    .widthIn(max = 300.dp),
                 fontSize = 17.sp,
                 fontWeight = FontWeight.Medium,
                 color = Color.Gray
@@ -196,7 +193,7 @@ fun ProductDetailBar() {
                 color = Color.Black,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 70.dp, top = 10.dp), // Agrego padding para que este mas alineado con la imagen
+                    .padding(start = 70.dp, top = 10.dp),
                 textAlign = TextAlign.Left
             )
         },
@@ -263,7 +260,7 @@ fun ItemQuantity() {
             text = "$4.99",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(start = 16.dp) // Optional spacing
+            modifier = Modifier.padding(start = 16.dp)
         )
     }
 }

@@ -30,7 +30,7 @@ fun LocationScreen(navController : NavController) {
                 .fillMaxSize()
                 .padding(16.dp)
         ) {
-            // Back Arrow Icon
+
             IconButton(onClick = { navController.popBackStack() }) {
                 Icon(Icons.Default.ArrowBack, contentDescription = "Back")
             }
@@ -45,7 +45,7 @@ fun LocationScreen(navController : NavController) {
 
             Spacer(modifier = Modifier.weight(1f))
 
-            // Image (replace with your image resource)
+
             Image(
                 painter = painterResource(id = R.drawable.location),
                 contentDescription = "Image",
@@ -54,17 +54,16 @@ fun LocationScreen(navController : NavController) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Large Text
             Text("Select your location", fontSize = 24.sp)
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            // Small Text
+
             Text("Swithch on your location to stay in tune with", fontSize = 16.sp)
             Text("what’s happening in your area", fontSize = 16.sp)
 
             Spacer(modifier = Modifier.weight(1f))
-            // Dropdown Menu using ExposedDropdownMenuBox
+
             Text("Your zone", fontSize = 18.sp, modifier = Modifier.fillMaxWidth())
             Spacer(modifier = Modifier.height(8.dp))
             DropdownMenuWithExposedBox(
@@ -75,7 +74,6 @@ fun LocationScreen(navController : NavController) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Text Input Field with Label
             Text("Your area", fontSize = 18.sp, modifier = Modifier.fillMaxWidth())
             Spacer(modifier = Modifier.height(8.dp))
             OutlinedTextField(
@@ -87,7 +85,7 @@ fun LocationScreen(navController : NavController) {
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            // Button
+
             CommonButton(
                text = "Submit",
                onClick = {navController.navigate(DestinationScreen.shopDest.route)}
@@ -109,7 +107,6 @@ fun DropdownMenuWithExposedBox(
         expanded = expanded,
         onExpandedChange = { expanded = !expanded }
     ) {
-        // TextField to expose the dropdown menu
         OutlinedTextField(
             value = selectedOption,
             onValueChange = {},
@@ -121,7 +118,7 @@ fun DropdownMenuWithExposedBox(
                 .menuAnchor()
         )
 
-        // Dropdown Menu
+
         ExposedDropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false }

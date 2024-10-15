@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Parcial_grupo_8_YATheme {
                 Surface(color = Color(0xFF53B175)) {
-                    NavigationScreen() // Asegúrate de que esta función esté bien invocada
+                    NavigationScreen()
                 }
             }
         }

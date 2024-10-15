@@ -28,7 +28,7 @@ import com.example.parcial_grupo_8_ya.ui.theme.Purple40
 fun CustomTopBar(
     title: String,
 ) {
-    var menuExpanded by remember { mutableStateOf(true) } // Estado para el menú desplegable
+    var menuExpanded by remember { mutableStateOf(true) }
 
     TopAppBar(
         title = {
@@ -44,7 +44,7 @@ fun CustomTopBar(
             }
         },
         navigationIcon = {
-            IconButton(onClick = { menuExpanded = !menuExpanded }) { // Toggle para el menú
+            IconButton(onClick = { menuExpanded = !menuExpanded }) {
                 Icon(
                     Icons.Filled.Menu,
                     contentDescription = "Menu",

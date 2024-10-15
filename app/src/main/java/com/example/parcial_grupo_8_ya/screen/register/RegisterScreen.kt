@@ -48,11 +48,8 @@ fun RegisterScreen(
     var password by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
     val context = LocalContext.current
-
-    // Background Gradient
     GradientBackground()
 
-    // Main Column Layout
     Column(
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -62,22 +59,18 @@ fun RegisterScreen(
     ) {
         Spacer(modifier = Modifier.height(60.dp))
 
-        // Logo
         Logo()
 
         Spacer(modifier = Modifier.height(40.dp))
 
-        // Title
         SignUpTitle()
 
         Spacer(modifier = Modifier.height(15.dp))
 
-        // Subtitle
         SignUpSubtitle()
 
         Spacer(modifier = Modifier.height(40.dp))
 
-        // Input Fields
         InputField("Username", username) { username = it }
         Spacer(modifier = Modifier.height(16.dp))
         InputField("Email", email) { email = it }
@@ -90,19 +83,16 @@ fun RegisterScreen(
         Spacer(modifier = Modifier.height(11.dp))
 
 
-        // Agreement Text
         AgreementText()
 
         Spacer(modifier = Modifier.height(30.dp))
 
-        // Sign Up Button
         SignUpButton(username, email, password, context
             , navController, viewModel
         )
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Login Navigation
         LoginNavigation(
             navController
         )

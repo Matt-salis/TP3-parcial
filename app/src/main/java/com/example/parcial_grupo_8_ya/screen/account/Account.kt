@@ -38,16 +38,16 @@ fun AccountScreen(onMenuClick: () -> Unit, modifier: Modifier) {
             .background(Color.White)
     ) {
         item {
-            // Profile Section
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(20.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Circular Profile Picture
+
                 Image(
-                    painter = painterResource(id = R.drawable.profilepic), // Replace with your profile picture resource
+                    painter = painterResource(id = R.drawable.profilepic),
                     contentDescription = "Profile Picture",
                     modifier = Modifier
                         .size(80.dp)
@@ -57,15 +57,15 @@ fun AccountScreen(onMenuClick: () -> Unit, modifier: Modifier) {
 
                 Spacer(modifier = Modifier.width(16.dp))
 
-                // Profile Name and Details
+
                 Column {
                     Text(
-                        text = "Afsar Hossen", // Bold text
+                        text = "Afsar Hossen",
                         fontWeight = FontWeight.Bold,
                         fontSize = 18.sp
                     )
                     Text(
-                        text = "imshuvo97@gmail.com", // Thin text
+                        text = "imshuvo97@gmail.com",
                         fontWeight = FontWeight.Light,
                         fontSize = 14.sp
                     )
@@ -74,7 +74,7 @@ fun AccountScreen(onMenuClick: () -> Unit, modifier: Modifier) {
 
             Spacer(modifier = Modifier.height(6.dp))
 
-            // Option items section
+
             val options = listOf(
                 "Orders" to R.drawable.orders_icon,
                 "My Details" to R.drawable.my_details_icon,
@@ -99,7 +99,7 @@ fun AccountScreen(onMenuClick: () -> Unit, modifier: Modifier) {
 
                 Text(text = "Dark Mode", fontSize = 20.sp, fontWeight = FontWeight.Medium)
 
-                Spacer(modifier = Modifier.weight(1f))  // Push the switch to the end
+                Spacer(modifier = Modifier.weight(1f))
 
                 Switch(
                     checked = false,
@@ -149,7 +149,7 @@ fun AccountOption(title: String, icon: Int, onClick: () -> Unit) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
-            painter = painterResource(id = icon), // Replace with your profile picture resource
+            painter = painterResource(id = icon),
             contentDescription = "Profile Picture",
             modifier = Modifier.size(24.dp)
         )
@@ -161,14 +161,14 @@ fun AccountOption(title: String, icon: Int, onClick: () -> Unit) {
         Spacer(modifier = Modifier.height(25.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.back_arrow), // Replace with your profile picture resource
+            painter = painterResource(id = R.drawable.back_arrow),
             contentDescription = "Profile Picture",
             modifier = Modifier.size(16.dp)
         )
     }
 }
 
-//@Preview(showBackground = true)
+
 @Composable
 fun AccountScreenPreview(navController: NavController) {
     Scaffold(

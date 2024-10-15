@@ -43,7 +43,7 @@ fun ProductCard(
             modifier = Modifier.padding(16.dp)
                 .fillMaxSize()
         ) {
-            // Image of the product
+
             Image(
                 painter = painterResource(id = productImageRes),
                 contentDescription = null,
@@ -53,7 +53,7 @@ fun ProductCard(
             )
             Spacer(modifier = Modifier.height(8.dp))
 
-            // Product name
+
             Text(
                 text = productName,
                 fontWeight = FontWeight.Bold,

@@ -63,7 +63,7 @@ fun BeverageHeading( navController: NavController) {
                     .padding(
                         top = 10.dp,
                         end = 27.dp
-                    ), // le agrego mas padding para que este alineado con grid
+                    ),
                 contentAlignment = Alignment.Center
             ) {
                 Text(

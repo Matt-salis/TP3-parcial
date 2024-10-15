@@ -107,7 +107,7 @@ fun MyCartScreen(navController: NavController) {
 
 @Composable
 fun MyCartScreen(mod: Modifier, viewModel: CheckoutViewModel = viewModel(), navController: NavController) {
-    // Estado de visibilidad del checkout
+
     val isCheckoutVisible by viewModel.isCheckoutVisible.collectAsState()
 
     Box(
@@ -121,7 +121,7 @@ fun MyCartScreen(mod: Modifier, viewModel: CheckoutViewModel = viewModel(), navC
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Lista de productos
+
             LazyColumn(
                 modifier = Modifier
                     .weight(1f)
@@ -153,7 +153,7 @@ fun MyCartScreen(mod: Modifier, viewModel: CheckoutViewModel = viewModel(), navC
                 modifier = Modifier
                     .fillMaxSize()
                     .background(Color.Black.copy(alpha = 0.5f))
-                    .clickable { viewModel.hideCheckout() } // Cerrar checkout
+                    .clickable { viewModel.hideCheckout() }
             )
         }
         Box(

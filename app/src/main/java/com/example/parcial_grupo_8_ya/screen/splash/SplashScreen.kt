@@ -85,14 +85,14 @@ fun NavigationScreen() {
 
     NavHost(
         navController = navController,
-        startDestination = DestinationScreen.splashScreenDest.route // Comienza en la splash
+        startDestination = DestinationScreen.splashScreenDest.route
     ) {
         composable(route = DestinationScreen.splashScreenDest.route) {
-            SplashScreen(navController = navController) // Pantalla de splash
+            SplashScreen(navController = navController)
         }
 
         composable(route = DestinationScreen.onboardingScreen.route) {
-            Onboarding(navController = navController) // Pantalla de onboarding
+            Onboarding(navController = navController)
         }
 
         composable(route = DestinationScreen.locationDest.route) {
@@ -100,7 +100,7 @@ fun NavigationScreen() {
         }
 
         composable(route = DestinationScreen.shopDest.route) {
-            Shop(navController = navController) // Pantalla de Shop
+            Shop(navController = navController)
         }
 
         composable(route = DestinationScreen.loginDest.route) {
@@ -146,17 +146,13 @@ fun NavigationScreen() {
 
 @Composable
 fun SplashScreen(navController: NavController) {
-    // Usamos LaunchedEffect para navegar automáticamente después de un tiempo
     LaunchedEffect(key1 = true) {
-        // Luego de la espera, navegamos a la siguiente pantalla
         navController.navigate(DestinationScreen.onboardingScreen.route) {
-            // Evita regresar a la SplashScreen con el botón de retroceso
             popUpTo(DestinationScreen.splashScreenDest.route) {
                 inclusive = true
             }
         }
     }
-    // Mostramos la imagen de la splash screen
     DesignSplashScreen(
         imagePainter = painterResource(id = R.drawable.logo_splash),
     )

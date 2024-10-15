@@ -39,21 +39,21 @@ fun OnboardingScreen(navController: NavController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF53B175)) // Color de fondo
+            .background(Color(0xFF53B175))
     ) {
-        // Imagen de fondo
+
         Image(
             painter = painterResource(id = R.drawable.fondo_onboarding),
             contentDescription = "Fondo onboarding",
             contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxSize() // Ocupa todo el espacio
+            modifier = Modifier.fillMaxSize()
         )
 
-        // Contenido superpuesto
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp), // Padding para no estar pegado a los bordes
+                .padding(16.dp),
             verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -80,7 +80,7 @@ fun OnboardingScreen(navController: NavController) {
             )
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Texto pequeño
+
             Spacer(modifier = Modifier.height(32.dp))
             CommonButton(
                 text = "Get Started",

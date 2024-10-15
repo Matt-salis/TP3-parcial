@@ -29,8 +29,6 @@ import com.example.parcial_grupo_8_ya.data.model.Product
 import com.example.parcial_grupo_8_ya.ui.component.BottomNavigationBar
 import com.example.parcial_grupo_8_ya.ui.component.CustomTopBar
 
-//@OptIn(ExperimentalMaterial3Api::class)
-//@Preview
 @Composable
 fun Shop(navController: NavController) {
     Scaffold(
@@ -127,7 +125,7 @@ fun ProductCardList(products: List<Product>) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(8.dp),
-        horizontalArrangement = Arrangement.spacedBy(0.dp) // Espacio entre las tarjetas
+        horizontalArrangement = Arrangement.spacedBy(0.dp)
     ) {
 
         items(products) { product ->

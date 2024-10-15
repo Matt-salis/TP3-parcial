@@ -13,7 +13,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class RegisterViewModel : ViewModel() {
-    // API call para registrar usuario
     fun registerUser(username : String, email : String, password : String, context: Context
                      , navController: NavController
     ) {

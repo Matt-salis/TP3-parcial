@@ -57,13 +57,13 @@ fun OrderAcceptedScreen(navController: NavController) {
             verticalArrangement = Arrangement.Center
         ) {
             Spacer(modifier = Modifier.height(100.dp))
-            // Checkmark icon
+
 
             CheckMarkImage()
 
             Spacer(modifier = Modifier.height(50.dp))
 
-            // Titulo
+
             Text(
                 text = "Your Order has been accepted",
                 textAlign = TextAlign.Center,
@@ -74,7 +74,7 @@ fun OrderAcceptedScreen(navController: NavController) {
             )
 
             Spacer(modifier = Modifier.height(20.dp))
-            // Descripcion
+
             Text(
                 text = "Your items have been placed and is on it's way to being processed",
                 style = TextStyle(
@@ -83,7 +83,7 @@ fun OrderAcceptedScreen(navController: NavController) {
                 )
             )
 
-            // Buttons
+
             Spacer(modifier = Modifier.height(110.dp))
             CommonButton(
                 text = "Track Order",
@@ -97,7 +97,7 @@ fun OrderAcceptedScreen(navController: NavController) {
                 contentPadding = PaddingValues(),
                 modifier = Modifier
                     .size(width = 350.dp, height = 30.dp)
-                    .padding(start = 8.dp) // padding para centrar boton
+                    .padding(start = 8.dp)
             ) {
                 Text("Back to home", color = Color.Black)
             }
@@ -114,7 +114,7 @@ fun FadeInTransition() {
         enter = fadeIn(),
         exit = fadeOut()
     ) {
-        // Fade in/out the background and the foreground.
+
         Box(
             Modifier
                 .fillMaxSize()
@@ -124,7 +124,7 @@ fun FadeInTransition() {
                 Modifier
                     .align(Alignment.Center)
                     .animateEnterExit(
-                        // Slide in/out the inner box.
+
                         enter = slideInVertically(),
                         exit = slideOutVertically()
                     )
@@ -144,7 +144,7 @@ fun CheckMarkImage() {
     Image(
         painter = painterResource(id = R.drawable.order_accepted),
         contentDescription = "Order Accepted",
-        modifier = Modifier.fillMaxWidth().padding(start = 40.dp, end = 60.dp), // padding para centrar imagen
+        modifier = Modifier.fillMaxWidth().padding(start = 40.dp, end = 60.dp),
         alignment = Alignment.Center
     )
 }
